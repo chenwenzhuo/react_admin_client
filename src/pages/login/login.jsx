@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Form, Input, Button} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
+import axios from "axios";
 
 import './login.less'
 import logo from './img/logo.png'
@@ -56,10 +57,25 @@ class Login extends Component {
     handleSubmit = (loginData) => {
         console.log("click submit");
         console.log(loginData);
-        console.log("this.formRef",this.formRef);
+        console.log("this.formRef", this.formRef);
         // 提交时对表单输入项进行统一验证
         this.formRef.current.validateFields().then(values => {
             console.log("表单验证通过", values);
+            axios.post("http://localhost:3000/ajaxProxy/login", {
+                "username": loginData.username,
+                "password": loginData.password
+            }).then(response => {
+                console.log("response", response);
+                //无论用户名密码是否正确，只要网络请求成功，就会执行此成功函数
+                //需要根据返回的状态码判断登陆是否成功
+                if (response.data.status !== 0) {//登陆失败，抛出异常
+                    throw response.data.msg;
+                }
+                this.props.history.push("/");
+            }).catch(error => {
+                // 登陆失败处理
+                console.log("error", error);
+            })
         }).catch(error => {
             console.log("表单验证失败", error);
         });
