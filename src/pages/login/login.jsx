@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 import {Form, Input, Button, message} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
 
 import {reqLogin} from '../../api/ajaxReqs';
 import memoryUtils from '../../utils/memoryUtils';
+import storageUtils from '../../utils/storageUtils';
 
 import './login.less'
 import logo from './img/logo.png'
@@ -13,6 +15,13 @@ class Login extends Component {
     formRef = React.createRef();
 
     render() {
+        // 若用户已登陆，跳转到管理界面
+        const loginUser = memoryUtils.user;
+        if (loginUser && loginUser._id) {
+            // 在render()中跳转，使用<Redirect/>
+            return <Redirect to='/'/>
+        }
+
         return (<div className="login">
             <div className="login-header">
                 {/*React中不支持直接使用相对路径引用图片*/}
@@ -96,7 +105,8 @@ class Login extends Component {
         if (response.data.status === 0) {
             message.success("登陆成功！");
             //跳转前保存用户信息
-            memoryUtils.user = response.data.data;
+            memoryUtils.user = response.data.data;//保存到内存
+            storageUtils.saveLoginUser(response.data.data);//持久化保存
             this.props.history.replace("/");
         } else {
             message.error("登陆失败！" + response.data.msg);//用户名或密码错误

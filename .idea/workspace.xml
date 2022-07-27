@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dee6cc58-6d98-4cbe-9560-17cc07376bc9" name="Changes" comment="将登陆成功后的页面跳转方式改为replace">
-      <change afterPath="$PROJECT_DIR$/src/utils/memoryUtils.js" afterDir="false" />
+    <list default="true" id="dee6cc58-6d98-4cbe-9560-17cc07376bc9" name="Changes" comment="自定义memoryUtils将登陆用户的信息保存到内存中，但刷新页面后登陆状态将丢失">
+      <change afterPath="$PROJECT_DIR$/src/utils/storageUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/admin/admin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/admin.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1658844293411" duration="311000" />
       <workItem from="1658844621153" duration="4924000" />
       <workItem from="1658850194176" duration="144000" />
-      <workItem from="1658928616886" duration="2427000" />
+      <workItem from="1658928616886" duration="4079000" />
     </task>
     <task id="LOCAL-00001" summary="完成antd的引入、按需打包和自定义主题，并使用antd完成登陆页面的静态布局、表单校验">
       <created>1658657645234</created>
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658929419747</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="自定义memoryUtils将登陆用户的信息保存到内存中，但刷新页面后登陆状态将丢失">
+      <created>1658931545556</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658931545556</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +188,8 @@
     <MESSAGE value="统一对请求错误进行处理，使得ajax接口始终返回一个成功对Promise，调用处无需自行对404等错误进行处理" />
     <MESSAGE value="使用async和await简化请求编写，并去掉错误处理" />
     <MESSAGE value="将登陆成功后的页面跳转方式改为replace" />
-    <option name="LAST_COMMIT_MESSAGE" value="将登陆成功后的页面跳转方式改为replace" />
+    <MESSAGE value="自定义memoryUtils将登陆用户的信息保存到内存中，但刷新页面后登陆状态将丢失" />
+    <option name="LAST_COMMIT_MESSAGE" value="自定义memoryUtils将登陆用户的信息保存到内存中，但刷新页面后登陆状态将丢失" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
