@@ -3,6 +3,7 @@ import {Form, Input, Button, message} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
 
 import {reqLogin} from '../../api/ajaxReqs';
+import memoryUtils from '../../utils/memoryUtils';
 
 import './login.less'
 import logo from './img/logo.png'
@@ -94,9 +95,11 @@ class Login extends Component {
         console.log("response", response);
         if (response.data.status === 0) {
             message.success("登陆成功！");
+            //跳转前保存用户信息
+            memoryUtils.user = response.data.data;
             this.props.history.replace("/");
         } else {
-            message.error("登陆失败！" + response.data.msg);//密码错误
+            message.error("登陆失败！" + response.data.msg);//用户名或密码错误
         }
     }
 
