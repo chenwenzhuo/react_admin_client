@@ -93,7 +93,8 @@ class Login extends Component {
         const response = await reqLogin(loginData.username, loginData.password);
         console.log("response", response);
         if (response.data.status === 0) {
-            this.props.history.push("/");
+            message.success("登陆成功！");
+            this.props.history.replace("/");
         } else {
             message.error("登陆失败！" + response.data.msg);//密码错误
         }
