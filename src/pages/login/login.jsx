@@ -8,7 +8,7 @@ import memoryUtils from '../../utils/memoryUtils';
 import storageUtils from '../../utils/storageUtils';
 
 import './login.less'
-import logo from './img/logo.png'
+import logo from '../../assets/img/logo.png'
 
 // 登陆的路由组件
 class Login extends Component {

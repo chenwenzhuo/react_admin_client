@@ -6,8 +6,8 @@ import Admin from "./pages/admin/admin"
 
 import './App.less';
 
-/*出现 export 'Switch' (imported as 'Switch') was not found in 'react-router-dom'
-* 报错时，将react-router-dom的版本切换为5.x：yarn add react-router-dom@5*/
+/*出现 export 'Switch' (imported as 'Switch') was not found in 'react-router-dom' 报错时，
+* 将react-router-dom的版本切换为5.x：yarn add react-router-dom@5*/
 
 // 应用根组件
 class App extends Component {

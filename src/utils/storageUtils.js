@@ -5,7 +5,7 @@ import store from 'store';
 
 const USER_KEY = 'login_user';
 
-export default {
+const storageUtils = {
     // 保存登陆用户
     saveLoginUser(user) {
         store.set(USER_KEY, user);
@@ -19,3 +19,5 @@ export default {
         store.remove(USER_KEY);
     }
 }
+
+export default storageUtils;
