@@ -4,38 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/react_admin_client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/Header.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/left-nav/LeftNav.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/left-nav/LeftNav.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/admin/admin.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/category/category.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/charts/barchart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/charts/linechart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/charts/piechart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/product/products.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/role/Role.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/user/User.jsx" afterDir="false" />
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/admin/admin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/admin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/img/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/memoryUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/memoryUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/storageUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/storageUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/admin/admin.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/admin.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,8 +93,17 @@
       <updated>1659016050858</updated>
       <workItem from="1659016055779" duration="1389000" />
       <workItem from="1659017482335" duration="2564000" />
-      <workItem from="1659244970904" duration="19479000" />
+      <workItem from="1659244970904" duration="19714000" />
+      <workItem from="1659360063100" duration="3902000" />
     </task>
+    <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
+      <created>1659279673945</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659279673945</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,5 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="完成登陆后页面的左侧导航栏组件及菜单项路由跳转" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成登陆后页面的左侧导航栏组件及菜单项路由跳转" />
   </component>
 </project>
