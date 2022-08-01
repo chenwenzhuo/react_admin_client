@@ -169,3 +169,49 @@ validatePwd = (rule, value) => {
     })
 }
 ```
+
+### 左侧导航栏
+
+导航栏主体结构使用antd Menu组件完成。从antd 4.20.0版本开始，使用`<Menu/>`标签与`items`配置对象数组的方式定义菜单结构。
+
+```jsx
+<Menu
+    mode="inline"
+    theme="dark"
+    items={items}
+    selectedKeys={[curPath]}
+    defaultOpenKeys={curItem ? [curItem.key] : []}
+    onClick={(itemInfo) => {
+        this.handleMenuClick(itemInfo);
+    }}
+/>
+
+getItem = (label, key, icon, children, type) => {
+    return {key, icon, children, label, type};
+}
+
+state = {
+    items: [
+        this.getItem('首页', '/home', <HomeOutlined/>),
+        this.getItem('商品', '/prodCate', <AppstoreOutlined/>, [
+            this.getItem('品类管理', '/category', <UnorderedListOutlined/>),
+            this.getItem('商品管理', '/products', <ToolOutlined/>)
+        ]),
+        this.getItem('用户管理', '/user', <UserOutlined/>),
+        this.getItem('角色管理', '/role', <CheckCircleOutlined/>),
+        this.getItem('图形图表', '/charts', <AreaChartOutlined/>, [
+            this.getItem('柱形图', '/charts/barchart', <BarChartOutlined/>),
+            this.getItem('折线图', '/charts/linechart', <LineChartOutlined/>),
+            this.getItem('饼图', '/charts/piechart', <PieChartOutlined/>),
+        ]),
+    ]
+};
+```
+
+通过`withRouter`高阶函数，实现在非路由组件中使用`history`, `location`, `match`等对象：
+```jsx
+import {withRouter} from "react-router-dom";
+
+class LeftNav extends Component { }
+export default withRouter(LeftNav);
+```
