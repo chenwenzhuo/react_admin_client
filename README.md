@@ -209,9 +209,60 @@ state = {
 ```
 
 通过`withRouter`高阶函数，实现在非路由组件中使用`history`, `location`, `match`等对象：
+
 ```jsx
 import {withRouter} from "react-router-dom";
 
-class LeftNav extends Component { }
+class LeftNav extends Component {
+}
+
 export default withRouter(LeftNav);
+```
+
+### 右侧头部栏
+
+主要实现了显示当前登陆人、退出登陆、显示当前时间、选择地点并显示实时天气的功能。
+
+使用`antd`的`Modal`弹出框组件，在退出前进行确认：
+
+```jsx
+Modal.confirm({
+    title: "是否确认退出登陆？",
+    icon: <ExclamationCircleOutlined/>,
+    content: "点击\"确认\"立即退出，点击\"取消\"保持登陆状态",
+    okText: "确认",
+    cancelText: "取消",
+    onOk: () => {
+        //删除保存的用户数据，并跳转到登陆界面
+        storageUtils.removeLoginUser();
+        memoryUtils.user = {};
+        this.props.history.replace("/login");
+    },
+});
+```
+
+配置代理实现跨域，获取百度地图天气数据：
+
+```js
+createProxyMiddleware('/weatherProxy', {
+    target: 'https://api.map.baidu.com',
+    changeOrigin: true,
+    pathRewrite: {'^/weatherProxy': ''}
+});
+```
+
+定义天气数据获取接口：
+
+```js
+export const reqWeather = (district_id) => ajax('/weatherProxy/weather/v1/', {
+    district_id: district_id,
+    data_type: 'all',
+    output: 'json',
+    ak: 'ZBFdHGeqtensMmvLAgPhc22VUBp6u87O'
+});
+```
+
+最终以`GET`方式获取天气数据，URL为：
+```
+https://api.map.baidu.com/weather/v1/?district_id=500152&data_type=all&output=json&ak=ZBFdHGeqtensMmvLAgPhc22VUBp6u87O
 ```
