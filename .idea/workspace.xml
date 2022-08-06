@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="记录左侧导航菜单的实现">
-      <change afterPath="$PROJECT_DIR$/src/components/header/305.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/dateUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/react_admin_client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/react_admin_client.iml" afterDir="false" />
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="记录右侧头部组件的实现重点">
+      <change afterPath="$PROJECT_DIR$/src/pages/home/home.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ajaxReqs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ajaxReqs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/left-nav/LeftNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/left-nav/LeftNav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +98,7 @@
       <workItem from="1659365123530" duration="674000" />
       <workItem from="1659447245735" duration="4427000" />
       <workItem from="1659536201433" duration="2207000" />
-      <workItem from="1659764224795" duration="11350000" />
+      <workItem from="1659764224795" duration="12463000" />
     </task>
     <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
       <created>1659279673945</created>
@@ -128,7 +121,49 @@
       <option name="project" value="LOCAL" />
       <updated>1659365767151</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="配置代理，跨域请求百度地图天气数据">
+      <created>1659778816617</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659778816617</updated>
+    </task>
+    <task id="LOCAL-00005" summary="定义天气数据请求函数">
+      <created>1659778840362</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659778840362</updated>
+    </task>
+    <task id="LOCAL-00006" summary="日期相关方法模块，定义了获取当前时间并返回格式化字符串的函数">
+      <created>1659778892620</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659778892620</updated>
+    </task>
+    <task id="LOCAL-00007" summary="通过state参数方式，向Header组件中传递需要渲染的菜单组件的名称">
+      <created>1659778959854</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659778959854</updated>
+    </task>
+    <task id="LOCAL-00008" summary="右侧头部组件">
+      <created>1659779006589</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659779006589</updated>
+    </task>
+    <task id="LOCAL-00009" summary="记录右侧头部组件的实现重点">
+      <created>1659779021881</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659779021881</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +185,12 @@
     <MESSAGE value="完成登陆后页面的左侧导航栏组件及菜单项路由跳转" />
     <MESSAGE value="完成Header组件静态界面" />
     <MESSAGE value="记录左侧导航菜单的实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="记录左侧导航菜单的实现" />
+    <MESSAGE value="配置代理，跨域请求百度地图天气数据" />
+    <MESSAGE value="定义天气数据请求函数" />
+    <MESSAGE value="日期相关方法模块，定义了获取当前时间并返回格式化字符串的函数" />
+    <MESSAGE value="通过state参数方式，向Header组件中传递需要渲染的菜单组件的名称" />
+    <MESSAGE value="右侧头部组件" />
+    <MESSAGE value="记录右侧头部组件的实现重点" />
+    <option name="LAST_COMMIT_MESSAGE" value="记录右侧头部组件的实现重点" />
   </component>
 </project>
