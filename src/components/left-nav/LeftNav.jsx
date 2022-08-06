@@ -36,7 +36,7 @@ class LeftNav extends Component {
         //当前菜单路径
         const curPath = this.props.location.pathname;
         //查找当前菜单项的父菜单
-        const curItem = this.state.items.find(item => {
+        const curItem = items.find(item => {
             if (!item.children) {
                 return false;
             }
@@ -63,7 +63,15 @@ class LeftNav extends Component {
     }
 
     handleMenuClick = (itemInfo) => {
-        this.props.history.push(itemInfo.key);
+        const {items} = this.state;
+        const menuKey = itemInfo.key;
+        const menuItem = items.find(item => {
+            return item.key === menuKey ||
+                (item.children ? item.children.find(it => it.key === menuKey) : false);
+        });
+        let menuName = menuItem.children ?
+            menuItem.children.find(item => item.key === menuKey).label : menuItem.label;
+        this.props.history.push(itemInfo.key, {menuName});
     }
 }
 
