@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="完成Header组件静态界面">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="记录左侧导航菜单的实现">
+      <change afterPath="$PROJECT_DIR$/src/components/header/305.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/dateUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/react_admin_client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/react_admin_client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ajaxReqs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ajaxReqs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/left-nav/LeftNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/left-nav/LeftNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/charts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/header" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -61,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/header" />
       <recent name="$PROJECT_DIR$/src/pages/charts" />
       <recent name="$PROJECT_DIR$/src/pages" />
     </key>
@@ -93,7 +102,10 @@
       <workItem from="1659017482335" duration="2564000" />
       <workItem from="1659244970904" duration="19714000" />
       <workItem from="1659360063100" duration="4127000" />
-      <workItem from="1659365123530" duration="350000" />
+      <workItem from="1659365123530" duration="674000" />
+      <workItem from="1659447245735" duration="4427000" />
+      <workItem from="1659536201433" duration="2207000" />
+      <workItem from="1659764224795" duration="11350000" />
     </task>
     <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
       <created>1659279673945</created>
@@ -109,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659365098986</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="记录左侧导航菜单的实现">
+      <created>1659365767151</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659365767151</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +149,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="完成登陆后页面的左侧导航栏组件及菜单项路由跳转" />
     <MESSAGE value="完成Header组件静态界面" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成Header组件静态界面" />
+    <MESSAGE value="记录左侧导航菜单的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="记录左侧导航菜单的实现" />
   </component>
 </project>
