@@ -26,19 +26,19 @@ export const reqCategories = (parentId) => ajax('ajaxProxy/manage/category/list'
  * @param categoryName 待添加的分类名称
  * */
 export const reqAddCategory = (parentId, categoryName) =>
-    ajax('ajaxProxy/manage/category/list', {
+    ajax('ajaxProxy/manage/category/add', {
         parentId,
         categoryName
     }, 'POST');
 
 /**更新分类名称
  * @param categoryId 待更新待分类待id值（由后端生成，查询可得）
- * @param newCategoryName 分类待新名称
+ * @param categoryName 分类的新名称
  * */
-export const reqUpdateCategory = (categoryId, newCategoryName) =>
-    ajax('ajaxProxy/manage/category/list', {
+export const reqUpdateCategory = (categoryId, categoryName) =>
+    ajax('ajaxProxy/manage/category/update', {
         categoryId,
-        newCategoryName
+        categoryName
     }, 'POST');
 
 /**请求天气数据
