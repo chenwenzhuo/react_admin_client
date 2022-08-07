@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {ConfigProvider} from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';// 在需要用到的 组件文件中引入中文语言包
+
 import './index.css';
 import App from './App';
-
 import memoryUtils from './utils/memoryUtils';
 import storageUtils from './utils/storageUtils';
 
@@ -14,6 +16,8 @@ memoryUtils.user = loginUser;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App/>
+        <ConfigProvider locale={zhCN}>
+            <App/>
+        </ConfigProvider>
     </React.StrictMode>
 );
