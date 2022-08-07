@@ -74,8 +74,8 @@ class Login extends Component {
             console.log("response", response);
             //无论用户名密码是否正确，只要网络请求成功，就会执行此成功函数
             //需要根据返回的状态码判断登陆是否成功
-            if (response.data.status !== 0) {//登陆失败，抛出异常
-                throw response.data.msg;
+            if (response.status !== 0) {//登陆失败，抛出异常
+                throw response.msg;
             }
             this.props.history.push("/");
         }).catch(error => {
@@ -89,8 +89,8 @@ class Login extends Component {
                 console.log("response", response);
                 //无论用户名密码是否正确，只要网络请求成功，就会执行此成功函数
                 //需要根据返回的状态码判断登陆是否成功
-                if (response.data.status !== 0) {//登陆失败，抛出异常
-                    throw response.data.msg;
+                if (response.status !== 0) {//登陆失败，抛出异常
+                    throw response.msg;
                 }
                 this.props.history.push("/");
             }
@@ -102,14 +102,14 @@ class Login extends Component {
         // 使用async/await，简化请求编写（不使用回调函数）
         const response = await reqLogin(loginData.username, loginData.password);
         console.log("response", response);
-        if (response.data.status === 0) {
+        if (response.status === 0) {
             message.success("登陆成功！");
             //跳转前保存用户信息
-            memoryUtils.user = response.data.data;//保存到内存
-            storageUtils.saveLoginUser(response.data.data);//持久化保存
+            memoryUtils.user = response.data;//保存到内存
+            storageUtils.saveLoginUser(response.data);//持久化保存
             this.props.history.replace("/");
         } else {
-            message.error("登陆失败！" + response.data.msg);//用户名或密码错误
+            message.error("登陆失败！" + response.msg);//用户名或密码错误
         }
     }
 

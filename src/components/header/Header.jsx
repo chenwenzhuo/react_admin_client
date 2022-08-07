@@ -102,7 +102,7 @@ class Header extends Component {
     // 获取天气数据
     reqWeatherData = async (district_id) => {
         const response = await reqWeather(district_id);
-        const weatherDesc = response.data.result.now.text;
+        const weatherDesc = response.result.now.text;
         this.setState({weatherDesc});
     }
 
