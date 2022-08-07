@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="记录右侧头部组件的实现重点">
-      <change afterPath="$PROJECT_DIR$/src/pages/home/home.less" afterDir="false" />
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="更正了之前写错的请求连接和参数">
+      <change afterPath="$PROJECT_DIR$/src/pages/category/category.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/category/category.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/category.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +99,8 @@
       <workItem from="1659365123530" duration="674000" />
       <workItem from="1659447245735" duration="4427000" />
       <workItem from="1659536201433" duration="2207000" />
-      <workItem from="1659764224795" duration="12463000" />
+      <workItem from="1659764224795" duration="13921000" />
+      <workItem from="1659852167307" duration="20257000" />
     </task>
     <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
       <created>1659279673945</created>
@@ -163,7 +165,70 @@
       <option name="project" value="LOCAL" />
       <updated>1659779021881</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="简单实现Home组件">
+      <created>1659779454379</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659779454379</updated>
+    </task>
+    <task id="LOCAL-00011" summary="添加了查询分类列表、添加分类、更新分类名称的请求接口">
+      <created>1659853721194</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1659853721194</updated>
+    </task>
+    <task id="LOCAL-00012" summary="修改了请求成功时的返回数据，从直接返回response改为返回response.data">
+      <created>1659855634123</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659855634123</updated>
+    </task>
+    <task id="LOCAL-00013" summary="修改了获取请求数据的方式">
+      <created>1659855698741</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1659855698741</updated>
+    </task>
+    <task id="LOCAL-00014" summary="使用ConfigProvider将antd的默认语言改为中文">
+      <created>1659857395296</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1659857395296</updated>
+    </task>
+    <task id="LOCAL-00015" summary="删除了多余的formRef和console.log语句">
+      <created>1659880640773</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1659880640773</updated>
+    </task>
+    <task id="LOCAL-00016" summary="添加分类的表单组件">
+      <created>1659880681472</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1659880681472</updated>
+    </task>
+    <task id="LOCAL-00017" summary="修改分类名称的表单组件">
+      <created>1659880695992</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1659880695992</updated>
+    </task>
+    <task id="LOCAL-00018" summary="更正了之前写错的请求连接和参数">
+      <created>1659880789708</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1659880789708</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +256,15 @@
     <MESSAGE value="通过state参数方式，向Header组件中传递需要渲染的菜单组件的名称" />
     <MESSAGE value="右侧头部组件" />
     <MESSAGE value="记录右侧头部组件的实现重点" />
-    <option name="LAST_COMMIT_MESSAGE" value="记录右侧头部组件的实现重点" />
+    <MESSAGE value="简单实现Home组件" />
+    <MESSAGE value="添加了查询分类列表、添加分类、更新分类名称的请求接口" />
+    <MESSAGE value="修改了请求成功时的返回数据，从直接返回response改为返回response.data" />
+    <MESSAGE value="修改了获取请求数据的方式" />
+    <MESSAGE value="使用ConfigProvider将antd的默认语言改为中文" />
+    <MESSAGE value="删除了多余的formRef和console.log语句" />
+    <MESSAGE value="添加分类的表单组件" />
+    <MESSAGE value="修改分类名称的表单组件" />
+    <MESSAGE value="更正了之前写错的请求连接和参数" />
+    <option name="LAST_COMMIT_MESSAGE" value="更正了之前写错的请求连接和参数" />
   </component>
 </project>
