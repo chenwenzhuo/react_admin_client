@@ -6,7 +6,6 @@
 import axios from "axios"
 import {message} from 'antd'
 
-
 /**
  * @param url 请求地址
  * @param data 请求数据，默认值为空对象
@@ -28,7 +27,7 @@ export default function ajax(url, data = {}, type = 'GET') {
         }
         // 2.若成功，调用resolve
         promise.then(response => {
-            resolve(response);
+            resolve(response.data);
         }).catch(error => {// 3.若失败，不调用reject，而是弹窗提示异常信息
             console.log('请求出错！',error);
             message.error('请求出错！' + error.message);
