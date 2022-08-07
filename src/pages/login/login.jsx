@@ -12,8 +12,6 @@ import logo from '../../assets/img/logo.png'
 
 // 登陆的路由组件
 class Login extends Component {
-    formRef = React.createRef();
-
     render() {
         // 若用户已登陆，跳转到管理界面
         const loginUser = memoryUtils.user;
@@ -32,7 +30,7 @@ class Login extends Component {
             </div>
             <div className="login-content">
                 <h2 className="form-title">用户登陆</h2>
-                <Form onFinish={this.handleSubmit} className="login-form" ref={this.formRef}>
+                <Form onFinish={this.handleSubmit} className="login-form">
                     {/*对用户名进行声明式校验*/}
                     <Form.Item name='username' rules={[{required: true, message: '请输入用户名！'}, {
                         min: 4, message: '用户名不少于4位！'
@@ -63,15 +61,11 @@ class Login extends Component {
     }
 
     handleSubmit = async loginData => {
-        console.log("click submit");
-        console.log(loginData);
-        console.log("this.formRef", this.formRef);
         // 直接使用axios发送请求
         /*axios.post("http://localhost:3000/ajaxProxy/login", {
             "username": loginData.username,
             "password": loginData.password
         }).then(response => {
-            console.log("response", response);
             //无论用户名密码是否正确，只要网络请求成功，就会执行此成功函数
             //需要根据返回的状态码判断登陆是否成功
             if (response.status !== 0) {//登陆失败，抛出异常
@@ -80,13 +74,11 @@ class Login extends Component {
             this.props.history.push("/");
         }).catch(error => {
             // 登陆失败处理
-            console.log("error", error);
         })*/
 
         // 使用封装的方法发送请求
         /*reqLogin(loginData.username, loginData.password).then(
             response => {
-                console.log("response", response);
                 //无论用户名密码是否正确，只要网络请求成功，就会执行此成功函数
                 //需要根据返回的状态码判断登陆是否成功
                 if (response.status !== 0) {//登陆失败，抛出异常
@@ -96,12 +88,10 @@ class Login extends Component {
             }
         ).catch(error => {
             // 登陆失败处理
-            console.log("error", error);
         });*/
 
         // 使用async/await，简化请求编写（不使用回调函数）
         const response = await reqLogin(loginData.username, loginData.password);
-        console.log("response", response);
         if (response.status === 0) {
             message.success("登陆成功！");
             //跳转前保存用户信息
@@ -114,8 +104,6 @@ class Login extends Component {
     }
 
     validatePwd = (rule, value) => {
-        // console.log("validatePwd rule", rule);
-        // console.log("validatePwd value", value);
         return new Promise((resolve, reject) => {
             if (!value) {
                 reject("密码必须输入");
