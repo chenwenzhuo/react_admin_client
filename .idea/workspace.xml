@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="品类管理组件，提供了商品品类的展示、添加和修改功能">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="描述了商品-品类管理组件的功能和注意事项">
+      <change afterPath="$PROJECT_DIR$/src/pages/product/prod-add-update.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/product/prod-detail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/products.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +103,7 @@
       <workItem from="1659764224795" duration="13921000" />
       <workItem from="1659852167307" duration="20380000" />
       <workItem from="1659967309623" duration="166000" />
-      <workItem from="1659967488063" duration="1032000" />
+      <workItem from="1659967488063" duration="2414000" />
     </task>
     <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
       <created>1659279673945</created>
@@ -235,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659880897031</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="描述了商品-品类管理组件的功能和注意事项">
+      <created>1659968889160</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1659968889160</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +283,7 @@
     <MESSAGE value="修改分类名称的表单组件" />
     <MESSAGE value="更正了之前写错的请求连接和参数" />
     <MESSAGE value="品类管理组件，提供了商品品类的展示、添加和修改功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="品类管理组件，提供了商品品类的展示、添加和修改功能" />
+    <MESSAGE value="描述了商品-品类管理组件的功能和注意事项" />
+    <option name="LAST_COMMIT_MESSAGE" value="描述了商品-品类管理组件的功能和注意事项" />
   </component>
 </project>
