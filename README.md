@@ -266,3 +266,15 @@ export const reqWeather = (district_id) => ajax('/weatherProxy/weather/v1/', {
 ```
 https://api.map.baidu.com/weather/v1/?district_id=500152&data_type=all&output=json&ak=ZBFdHGeqtensMmvLAgPhc22VUBp6u87O
 ```
+
+### 商品-品类管理
+
+以表格（`antd`的`<Table/>`组件）的形式对商品品类进行展示，包含一级分类和二级分类。表格支持翻页、调整单页数据条数、跳转到指定页等功能。
+
+实现了查询、新增、修改商品品类等请求接口，并在此基础上使表格支持添加新品类和对已有分类进行重命名等功能。添加新品类时可以选择其所属的父分类。
+
+`antd`中`<Form/>`组件注意事项：
+
+>当`<Form.Item/>`设置`name`属性后，子组件会转为受控模式（只能从单一数据源获取数据）。因而输入组件（`<Input/>`、`<Select/>`等）的`defaultValue`和`value`属性不会生效。 
+> 
+> 需要在`<Form/>`上通过`initialValues`属性设置默认值。 注意`initialValues`不能被`setState`动态更新，需要用`setFieldsValue`方法来更新。
