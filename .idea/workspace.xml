@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="搭建了Products组件的整体路由结构，包含ProdHome、ProdAddUpdate、ProdDetail子组件">
-      <change afterPath="$PROJECT_DIR$/src/pages/product/products.less" afterDir="false" />
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="包含一些常量值的模块">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ajaxReqs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ajaxReqs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -62,6 +63,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src/components/header" />
       <recent name="$PROJECT_DIR$/src/pages/charts" />
       <recent name="$PROJECT_DIR$/src/pages" />
@@ -101,7 +103,9 @@
       <workItem from="1659764224795" duration="13921000" />
       <workItem from="1659852167307" duration="20380000" />
       <workItem from="1659967309623" duration="166000" />
-      <workItem from="1659967488063" duration="4722000" />
+      <workItem from="1659967488063" duration="4884000" />
+      <workItem from="1660053109523" duration="3517000" />
+      <workItem from="1660057295533" duration="2077000" />
     </task>
     <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
       <created>1659279673945</created>
@@ -271,7 +275,56 @@
       <option name="project" value="LOCAL" />
       <updated>1659970197776</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="商品管理组件的样式文件">
+      <created>1659972507398</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1659972507398</updated>
+    </task>
+    <task id="LOCAL-00026" summary="完成商品管理组件主界面表格静态布局">
+      <created>1659972558450</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1659972558450</updated>
+    </task>
+    <task id="LOCAL-00027" summary="修改路径严格匹配规则，更新/详情界面无需严格匹配，将无法匹配路径重定向到首页">
+      <created>1660053664303</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1660053664303</updated>
+    </task>
+    <task id="LOCAL-00028" summary="!important增加card-title-input的权重，防止样式被覆盖">
+      <created>1660054722412</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1660054722412</updated>
+    </task>
+    <task id="LOCAL-00029" summary="将表格列名数组加入state中，并将初始化方法的调用从constructor移到componentDidMount中">
+      <created>1660055261052</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1660055261052</updated>
+    </task>
+    <task id="LOCAL-00030" summary="优化静态布局细节">
+      <created>1660056630439</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1660056630439</updated>
+    </task>
+    <task id="LOCAL-00031" summary="包含一些常量值的模块">
+      <created>1660059117723</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1660059117723</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,12 +343,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="完成登陆后页面的左侧导航栏组件及菜单项路由跳转" />
-    <MESSAGE value="完成Header组件静态界面" />
-    <MESSAGE value="记录左侧导航菜单的实现" />
-    <MESSAGE value="配置代理，跨域请求百度地图天气数据" />
-    <MESSAGE value="定义天气数据请求函数" />
-    <MESSAGE value="日期相关方法模块，定义了获取当前时间并返回格式化字符串的函数" />
     <MESSAGE value="通过state参数方式，向Header组件中传递需要渲染的菜单组件的名称" />
     <MESSAGE value="右侧头部组件" />
     <MESSAGE value="记录右侧头部组件的实现重点" />
@@ -314,6 +361,13 @@
     <MESSAGE value="Products组件-添加、更新商品信息的子路由组件" />
     <MESSAGE value="Products组件-商品详情子路由组件" />
     <MESSAGE value="搭建了Products组件的整体路由结构，包含ProdHome、ProdAddUpdate、ProdDetail子组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="搭建了Products组件的整体路由结构，包含ProdHome、ProdAddUpdate、ProdDetail子组件" />
+    <MESSAGE value="商品管理组件的样式文件" />
+    <MESSAGE value="完成商品管理组件主界面表格静态布局" />
+    <MESSAGE value="修改路径严格匹配规则，更新/详情界面无需严格匹配，将无法匹配路径重定向到首页" />
+    <MESSAGE value="!important增加card-title-input的权重，防止样式被覆盖" />
+    <MESSAGE value="将表格列名数组加入state中，并将初始化方法的调用从constructor移到componentDidMount中" />
+    <MESSAGE value="优化静态布局细节" />
+    <MESSAGE value="包含一些常量值的模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="包含一些常量值的模块" />
   </component>
 </project>

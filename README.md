@@ -263,6 +263,7 @@ export const reqWeather = (district_id) => ajax('/weatherProxy/weather/v1/', {
 ```
 
 最终以`GET`方式获取天气数据，URL为：
+
 ```
 https://api.map.baidu.com/weather/v1/?district_id=500152&data_type=all&output=json&ak=ZBFdHGeqtensMmvLAgPhc22VUBp6u87O
 ```
@@ -275,6 +276,20 @@ https://api.map.baidu.com/weather/v1/?district_id=500152&data_type=all&output=js
 
 `antd`中`<Form/>`组件注意事项：
 
->当`<Form.Item/>`设置`name`属性后，子组件会转为受控模式（只能从单一数据源获取数据）。因而输入组件（`<Input/>`、`<Select/>`等）的`defaultValue`和`value`属性不会生效。 
-> 
+> 当`<Form.Item/>`设置`name`属性后，子组件会转为受控模式（只能从单一数据源获取数据）。因而输入组件（`<Input/>`、`<Select/>`等）的`defaultValue`和`value`属性不会生效。
+>
 > 需要在`<Form/>`上通过`initialValues`属性设置默认值。 注意`initialValues`不能被`setState`动态更新，需要用`setFieldsValue`方法来更新。
+
+### 商品-商品管理
+
+分页实现技术：
+
+1. 前台分页
+    - 请求获取数据: 一次获取所有数据, 翻页时不需要再发请求
+    - 请求接口：不需要指定请求参数: 页码(pageNum)和每页数量(pageSize)
+    - 响应数据：所有数据的数组
+
+2. 基于后台的分页
+    - 请求获取数据: 每次只获取当前页的数据, 翻页时要发请求
+    - 请求接口：需要指定请求参数: 页码(pageNum)和每页数量(pageSize)
+    - 响应数据：当前页数据的数组 + 总记录数(total)
