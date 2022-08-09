@@ -10,13 +10,9 @@ import {reqCategories, reqAddCategory, reqUpdateCategory} from "../../api/ajaxRe
 import './category.less'
 
 class Category extends Component {
-    constructor(props) {
-        super(props);
-        this.initTableColumns();
-    }
-
     state = {
         tableLoading: false,//表格数据是否正在加载中
+        tableColumns: [],//表格列名数组
         categories: [],//一级分类数组
         subCategories: [],//二级分类数组
         parentId: "0",//父分类ID
@@ -26,7 +22,15 @@ class Category extends Component {
     }
 
     render() {
-        const {tableLoading, categories, subCategories, parentId, parentName, modalDisplayStatus} = this.state;
+        const {
+            tableLoading,
+            tableColumns,
+            categories,
+            subCategories,
+            parentId,
+            parentName,
+            modalDisplayStatus
+        } = this.state;
         const category = this.category || {name: ""};//获取保存的分类对象
         const title = parentId === "0" ? "一级分类列表" : (
             <span>
@@ -39,7 +43,7 @@ class Category extends Component {
         return (
             <Card title={title} extra={extra}>
                 <Table dataSource={parentId === '0' ? categories : subCategories}
-                       columns={this.columns} bordered rowKey="_id"
+                       columns={tableColumns} bordered rowKey="_id"
                        loading={tableLoading}
                        pagination={{
                            defaultPageSize: 10,
@@ -72,10 +76,11 @@ class Category extends Component {
 
     componentDidMount() {
         this.getCategories();
+        this.initTableColumns();
     }
 
     initTableColumns = () => {
-        this.columns = [
+        const tableColumns = [
             {
                 title: '分类名称',
                 dataIndex: 'name',
@@ -96,6 +101,7 @@ class Category extends Component {
                 )
             },
         ];
+        this.setState({tableColumns});
     }
 
     getCategories = async (parentId) => {
