@@ -4,6 +4,8 @@ import {
 } from "antd";
 import {PlusOutlined} from '@ant-design/icons';
 
+import {reqProducts} from "../../api/ajaxReqs";
+import {PAGE_SIZE} from "../../utils/constants";
 import './products.less';
 
 const Option = Select.Option;
@@ -11,10 +13,14 @@ const Option = Select.Option;
 // Products组件-默认子路由组件，用于展示商品信息
 class ProdHome extends Component {
     state = {
-        tableColumns: []
+        tableColumns: [],//表格列定义数组
+        products: [],//表格商品数据数组
+        total: 0,//商品的总数量
+        loading: false,//表格数据是否正在加载中
     }
 
     render() {
+        const {tableColumns, products, total, loading} = this.state;
         const cardTitle = (
             <span>
                 <Select defaultValue={"name_search"} className={"card-title-select"}>
@@ -26,22 +32,31 @@ class ProdHome extends Component {
             </span>
         );
         const cardExtra = (<Button type="primary" icon={<PlusOutlined/>}>添加商品</Button>);
-        const dataSource = [
-            {id: "1", name: "联想ThinkPad 翼480", description: "年度重量级新品", price: "66000", status: "在售"},
-            {id: "2", name: "华硕（ASUS）飞行堡垒", description: "15.6英寸窄边游戏本", price: "6999", status: "在售"},
-            {id: "3", name: "你不知道的JavaScript（上卷）", description: "图灵程序设计丛书", price: "35", status: "下架"},
-        ]
+        /*const dataSource = [
+            {_id: "1", name: "联想ThinkPad 翼480", desc: "年度重量级新品", price: "66000", status: "在售"},
+            {_id: "2", name: "华硕（ASUS）飞行堡垒", desc: "15.6英寸窄边游戏本", price: "6999", status: "在售"},
+            {_id: "3", name: "你不知道的JavaScript（上卷）", desc: "图灵程序设计丛书", price: "35", status: "下架"},
+        ]*/
         return (
             <Card title={cardTitle} extra={cardExtra}>
-                <Table dataSource={dataSource} columns={this.state.tableColumns} rowKey={"id"}/>
+                <Table dataSource={products} columns={tableColumns} rowKey={"_id"} bordered loading={loading}
+                       pagination={{
+                           total,
+                           defaultPageSize: PAGE_SIZE,
+                           showQuickJumper: true,
+                           onChange: this.getProducts
+                       }}
+                />
             </Card>
         );
     }
 
     componentDidMount() {
         this.initTableColumns();
+        this.getProducts(1);
     }
 
+    //初始化表格列定义数组
     initTableColumns = () => {
         //通过align属性将表格内容居中
         //若希望表头居中，表体左对齐，则在render中进行自定义
@@ -55,9 +70,9 @@ class ProdHome extends Component {
         }, {
             title: '商品描述',
             align: 'center',
-            dataIndex: 'description',
-            render: (description) => (
-                <p style={{textAlign: 'left'}}>{description}</p>
+            dataIndex: 'desc',
+            render: (desc) => (
+                <p style={{textAlign: 'left'}}>{desc}</p>
             )
         }, {
             title: '价格',
@@ -89,6 +104,18 @@ class ProdHome extends Component {
             )
         },];
         this.setState({tableColumns});
+    }
+
+    //获取指定页码的商品数据
+    getProducts = async (pageNum) => {
+        this.setState({loading: true});//显示loading效果
+        const response = await reqProducts(pageNum, 5);
+        this.setState({loading: false});//隐藏loading
+        if (response.status === 0) {
+            const {total, list} = response.data;
+            this.setState({total, products: list});
+        }
+        console.log("getProducts---response---", response);
     }
 }
 
