@@ -10,9 +10,8 @@ const Option = Select.Option;
 
 // Products组件-默认子路由组件，用于展示商品信息
 class ProdHome extends Component {
-    constructor(props) {
-        super(props);
-        this.initTableColumns();
+    state = {
+        tableColumns: []
     }
 
     render() {
@@ -34,31 +33,54 @@ class ProdHome extends Component {
         ]
         return (
             <Card title={cardTitle} extra={cardExtra}>
-                <Table dataSource={dataSource} columns={this.tableColumns} rowKey={"id"}/>
+                <Table dataSource={dataSource} columns={this.state.tableColumns} rowKey={"id"}/>
             </Card>
         );
     }
 
+    componentDidMount() {
+        this.initTableColumns();
+    }
+
     initTableColumns = () => {
-        this.tableColumns = [{
+        //通过align属性将表格内容居中
+        //若希望表头居中，表体左对齐，则在render中进行自定义
+        const tableColumns = [{
             title: '商品名称',
             dataIndex: 'name',
+            align: 'center',
+            render: (name) => (
+                <p style={{textAlign: 'left'}}>{name}</p>
+            )
         }, {
             title: '商品描述',
+            align: 'center',
             dataIndex: 'description',
+            render: (description) => (
+                <p style={{textAlign: 'left'}}>{description}</p>
+            )
         }, {
             title: '价格',
             dataIndex: 'price',
+            align: 'center',
+            width: 150,
+            //通过dataIndex指定了价格对应的属性，故render收到的参数即为属性值
+            render: (price) => '¥' + price
         }, {
             title: '状态',
+            align: 'center',
+            width: 120,
             render: (goods) => (
                 <span>
-                    <span>{goods.status}</span><br/>
+                    <span>{goods.status}</span>
+                    <br/>
                     <Button type={"primary"}>下架</Button>
                 </span>
             )
         }, {
             title: '操作',
+            align: 'center',
+            width: 150,
             render: () => (
                 <span>
                     <button className="oprt-button">详情</button>
@@ -66,6 +88,7 @@ class ProdHome extends Component {
                 </span>
             )
         },];
+        this.setState({tableColumns});
     }
 }
 
