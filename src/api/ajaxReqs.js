@@ -48,7 +48,7 @@ export const reqUpdateCategory = (categoryId, categoryName) => ajax('ajaxProxy/m
 /**请求天气数据
  * @param district_id 地区编号
  * */
-export const reqWeather = (district_id) => ajax('/weatherProxy/weather/v1/', {
+export const reqWeather = (district_id) => ajax('weatherProxy/weather/v1/', {
     district_id: district_id, data_type: 'all', output: 'json', ak: 'ZBFdHGeqtensMmvLAgPhc22VUBp6u87O'
 });
 //https://api.map.baidu.com/weather/v1/?district_id=500152&data_type=all&output=json&ak=ZBFdHGeqtensMmvLAgPhc22VUBp6u87O
