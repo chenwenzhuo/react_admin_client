@@ -31,15 +31,43 @@ class ProdHome extends Component {
                 <Button type={"primary"}>搜索</Button>
             </span>
         );
-        const cardExtra = (<Button type="primary" icon={<PlusOutlined/>}>添加商品</Button>);
-        /*const dataSource = [
-            {_id: "1", name: "联想ThinkPad 翼480", desc: "年度重量级新品", price: "66000", status: "在售"},
-            {_id: "2", name: "华硕（ASUS）飞行堡垒", desc: "15.6英寸窄边游戏本", price: "6999", status: "在售"},
-            {_id: "3", name: "你不知道的JavaScript（上卷）", desc: "图灵程序设计丛书", price: "35", status: "下架"},
-        ]*/
+        const cardExtra = (
+            <Button type="primary" icon={<PlusOutlined/>}
+                    onClick={() => this.props.history.push("/products/add_update")}>
+                添加商品
+            </Button>);
+        const dataSource = [
+            {
+                _id: "1",
+                name: "联想ThinkPad 翼480",
+                desc: "年度重量级新品",
+                price: "66000",
+                status: "在售",
+                pCategoryId: "62ef5909c9014e6ea101b4f3",
+                categoryId: "62ef7055c9014e6ea101b508"
+            },
+            {
+                _id: "2",
+                name: "华硕（ASUS）飞行堡垒",
+                desc: "15.6英寸窄边游戏本",
+                price: "6999",
+                status: "在售",
+                pCategoryId: "62ef5909c9014e6ea101b4f3",
+                categoryId: "62ef7055c9014e6ea101b508"
+            },
+            {
+                _id: "3",
+                name: "你不知道的JavaScript（上卷）",
+                desc: "图灵程序设计丛书",
+                price: "35",
+                status: "下架",
+                pCategoryId: "0",
+                categoryId: "62ef6405c9014e6ea101b4f4"
+            },
+        ]
         return (
             <Card title={cardTitle} extra={cardExtra}>
-                <Table dataSource={products} columns={tableColumns} rowKey={"_id"} bordered loading={loading}
+                <Table dataSource={dataSource} columns={tableColumns} rowKey={"_id"} bordered loading={loading}
                        pagination={{
                            total,
                            defaultPageSize: PAGE_SIZE,
@@ -96,10 +124,13 @@ class ProdHome extends Component {
             title: '操作',
             align: 'center',
             width: 150,
-            render: () => (
+            render: (product) => (
                 <span>
-                    <button className="oprt-button">详情</button>
-                    <button className="oprt-button">修改</button>
+                    <button className="oprt-button-prod detail-btn-prod-home">详情</button>
+                    <button className="oprt-button-prod"
+                            onClick={() => this.props.history.push("/products/add_update", product)}>
+                        修改
+                    </button>
                 </span>
             )
         },];
