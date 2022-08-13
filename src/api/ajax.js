@@ -21,15 +21,15 @@ export default function ajax(url, data = {}, type = 'GET') {
         let promise;
         // 1.执行异步请求
         if (type === 'GET') {
-            promise = axios.get(url, {params: data});//发送get请求
+            promise = axios.get("http://localhost:3000/" + url, {params: data});//发送get请求
         } else {
-            promise = axios.post(url, data);//发送post请求
+            promise = axios.post("http://localhost:3000/" + url, data);//发送post请求
         }
         // 2.若成功，调用resolve
         promise.then(response => {
             resolve(response.data);
         }).catch(error => {// 3.若失败，不调用reject，而是弹窗提示异常信息
-            console.log('请求出错！',error);
+            console.log('请求出错！', error);
             message.error('请求出错！' + error.message);
         });
     });
