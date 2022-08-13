@@ -44,7 +44,8 @@ class ProdHome extends Component {
                 price: "66000",
                 status: "在售",
                 pCategoryId: "62ef5909c9014e6ea101b4f3",
-                categoryId: "62ef7055c9014e6ea101b508"
+                categoryId: "62ef7055c9014e6ea101b508",
+                imgs:["image-1660375711767.jpg","image-1660375758973.jpg"]
             },
             {
                 _id: "2",
@@ -53,7 +54,8 @@ class ProdHome extends Component {
                 price: "6999",
                 status: "在售",
                 pCategoryId: "62ef5909c9014e6ea101b4f3",
-                categoryId: "62ef7055c9014e6ea101b508"
+                categoryId: "62ef7055c9014e6ea101b508",
+                imgs:["image-1660375774809.jpg","image-1660376339071.jpg"]
             },
             {
                 _id: "3",
@@ -62,7 +64,8 @@ class ProdHome extends Component {
                 price: "35",
                 status: "下架",
                 pCategoryId: "0",
-                categoryId: "62ef6405c9014e6ea101b4f4"
+                categoryId: "62ef6405c9014e6ea101b4f4",
+                imgs:["image-1660379880396.jpg","image-1660380021229.jpg"]
             },
         ]
         return (
