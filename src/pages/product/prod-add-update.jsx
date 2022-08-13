@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Button, Card, Cascader, Form, Input, message} from 'antd'
 import {ArrowLeftOutlined} from '@ant-design/icons';
 
+import PicturesWall from "./pictures-wall";
 import {reqCategories} from "../../api/ajaxReqs";
 
 const {Item} = Form;
@@ -9,6 +10,8 @@ const {TextArea} = Input;
 
 // Products组件-添加、更新商品信息的子路由组件
 class ProdAddUpdate extends Component {
+    picWall = React.createRef();
+
     constructor(props) {
         super(props);
         const product = this.props.location.state;//取出state参数
@@ -58,10 +61,11 @@ class ProdAddUpdate extends Component {
                     <Item label={"商品分类"} name={"categoryIds"} initialValue={categoryIds}
                           rules={[{required: true, message: "必须选择商品分类"}]}>
                         <Cascader placeholder={"请选择商品分类"}
-                            options={prodCategories} loadData={this.loadSubCategories}/>
+                                  options={prodCategories} loadData={this.loadSubCategories}/>
                     </Item>
                     <Item label={"商品图片"}>
-                        <div>商品图片</div>
+                        {/*ref用于在提交时获取上传的图片名称数组*/}
+                        <PicturesWall ref={this.picWall} imgs={this.product.imgs}/>
                     </Item>
                     <Item label={"商品详情"}>
                         <div>商品详情</div>
@@ -80,6 +84,9 @@ class ProdAddUpdate extends Component {
 
     onFormFinish = (values) => {
         console.log("onFormFinish---values---", values);
+        //获取PicturesWall组件中上传的图片
+        const imgNames = this.picWall.current.getImageNames();//通过ref可实现父组件调用子组件方法
+        console.log("onFormFinish-----imgNames-----", imgNames);
     }
 
     //自定义校验商品价格
