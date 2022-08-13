@@ -41,9 +41,14 @@ export const reqProducts = (pageNum, pageSize) => ajax(AJAX_PREFIX + 'manage/pro
  * @param categoryId 待更新待分类待id值（由后端生成，查询可得）
  * @param categoryName 分类的新名称
  * */
-export const reqUpdateCategory = (categoryId, categoryName) => ajax('ajaxProxy/manage/category/update', {
+export const reqUpdateCategory = (categoryId, categoryName) => ajax(AJAX_PREFIX + 'manage/category/update', {
     categoryId, categoryName
 }, 'POST');
+
+/**删除上传的图片
+ * @param name 要删除的图片名称
+ * */
+export const reqDeleteImg = (name) => ajax(AJAX_PREFIX + 'manage/img/delete', {name}, 'POST');
 
 /**请求天气数据
  * @param district_id 地区编号
