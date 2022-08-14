@@ -45,10 +45,19 @@ export const reqUpdateCategory = (categoryId, categoryName) => ajax(AJAX_PREFIX 
     categoryId, categoryName
 }, 'POST');
 
-/**删除上传的图片
+/**删除指定名称的已上传图片
  * @param name 要删除的图片名称
  * */
 export const reqDeleteImg = (name) => ajax(AJAX_PREFIX + 'manage/img/delete', {name}, 'POST');
+
+/**添加/更新商品
+ * 若商品对象参数product中存在 _id 属性，则为更新，否则为添加
+ * @param product 商品信息对象
+ * */
+export const reqAddOrUpdateProduct = (product) => ajax(
+    AJAX_PREFIX + 'manage/product/' + (product._id ? 'update' : 'add'),
+    product,
+    'POST');
 
 /**请求天气数据
  * @param district_id 地区编号
