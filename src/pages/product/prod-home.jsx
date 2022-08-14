@@ -111,7 +111,7 @@ class ProdHome extends Component {
     //获取指定页码的商品数据
     getProducts = async (pageNum) => {
         this.setState({loading: true});//显示loading效果
-        const response = await reqProducts(pageNum, 5);
+        const response = await reqProducts(pageNum, PAGE_SIZE);
         this.setState({loading: false});//隐藏loading
         if (response.status === 0) {
             const {total, list} = response.data;

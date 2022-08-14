@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="静态数据dataSource中添加detail属性">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="完善了添加/更新商品的请求发送">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ajaxReqs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ajaxReqs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/product/prod-add-update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-add-update.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +107,7 @@
       <workItem from="1660225435897" duration="6588000" />
       <workItem from="1660369441135" duration="10962000" />
       <workItem from="1660400902791" duration="5795000" />
-      <workItem from="1660462830073" duration="3918000" />
+      <workItem from="1660462830073" duration="4635000" />
     </task>
     <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
       <created>1659279673945</created>
@@ -443,7 +438,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660464714732</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="定义了添加/更新商品的接口">
+      <created>1660468330679</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1660468330679</updated>
+    </task>
+    <task id="LOCAL-00049" summary="完善了添加/更新商品的请求发送">
+      <created>1660468408070</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1660468408070</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,8 +471,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="搭建了Products组件的整体路由结构，包含ProdHome、ProdAddUpdate、ProdDetail子组件" />
-    <MESSAGE value="商品管理组件的样式文件" />
     <MESSAGE value="完成商品管理组件主界面表格静态布局" />
     <MESSAGE value="修改路径严格匹配规则，更新/详情界面无需严格匹配，将无法匹配路径重定向到首页" />
     <MESSAGE value="!important增加card-title-input的权重，防止样式被覆盖" />
@@ -487,6 +494,8 @@
     <MESSAGE value="基于react-draft-wysiwyg的富文本编辑器组件，用于编辑商品详情" />
     <MESSAGE value="添加RichTextEditor组件" />
     <MESSAGE value="静态数据dataSource中添加detail属性" />
-    <option name="LAST_COMMIT_MESSAGE" value="静态数据dataSource中添加detail属性" />
+    <MESSAGE value="定义了添加/更新商品的接口" />
+    <MESSAGE value="完善了添加/更新商品的请求发送" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了添加/更新商品的请求发送" />
   </component>
 </project>
