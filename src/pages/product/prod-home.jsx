@@ -45,7 +45,8 @@ class ProdHome extends Component {
                 status: "在售",
                 pCategoryId: "62ef5909c9014e6ea101b4f3",
                 categoryId: "62ef7055c9014e6ea101b508",
-                imgs:["image-1660375711767.jpg","image-1660375758973.jpg"]
+                imgs: ["image-1660375711767.jpg", "image-1660375758973.jpg"],
+                detail: "<p><strong>联想</strong><em><ins>ThinkPad</ins></em> <del>翼480</del></p>"
             },
             {
                 _id: "2",
@@ -55,7 +56,8 @@ class ProdHome extends Component {
                 status: "在售",
                 pCategoryId: "62ef5909c9014e6ea101b4f3",
                 categoryId: "62ef7055c9014e6ea101b508",
-                imgs:["image-1660375774809.jpg","image-1660376339071.jpg"]
+                imgs: ["image-1660375774809.jpg", "image-1660376339071.jpg"],
+                detail: "<p style=\"text-align:center;\"><code>华硕</code>（ASUS）<sup>飞行堡垒</sup></p>"
             },
             {
                 _id: "3",
@@ -65,7 +67,8 @@ class ProdHome extends Component {
                 status: "下架",
                 pCategoryId: "0",
                 categoryId: "62ef6405c9014e6ea101b4f4",
-                imgs:["image-1660379880396.jpg","image-1660380021229.jpg"]
+                imgs: ["image-1660379880396.jpg", "image-1660380021229.jpg"],
+                detail: "<p><ins>你不知道的</ins><code><strong>JavaScript</strong></code><sub>（上卷）</sub></p>"
             },
         ]
         return (
@@ -149,7 +152,6 @@ class ProdHome extends Component {
             const {total, list} = response.data;
             this.setState({total, products: list});
         }
-        console.log("getProducts---response---", response);
     }
 }
 
