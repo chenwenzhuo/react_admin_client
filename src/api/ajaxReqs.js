@@ -37,6 +37,19 @@ export const reqAddCategory = (parentId, categoryName) => ajax(AJAX_PREFIX + 'ma
  * */
 export const reqProducts = (pageNum, pageSize) => ajax(AJAX_PREFIX + 'manage/product/list', {pageNum, pageSize});
 
+/**根据商品名称/描述，搜索产品分页列表
+ * @param pageNum 搜索的页码
+ * @param pageSize 搜索的页大小
+ * @param searchKey 搜索的关键词
+ * @param searchType 搜索类型，值productName/productDesc分别标识根据名称/描述搜索
+ * */
+export const reqSearchProducts = ({pageNum, pageSize, searchKey, searchType}) =>
+    ajax(AJAX_PREFIX + 'manage/product/search', {
+        pageNum,
+        pageSize,
+        [searchType]: searchKey//[searchType]表示使用searchType变量的值，作为对象的属性名
+    });
+
 /**更新分类名称
  * @param categoryId 待更新待分类待id值（由后端生成，查询可得）
  * @param categoryName 分类的新名称
