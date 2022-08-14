@@ -3,6 +3,7 @@ import {Button, Card, Cascader, Form, Input, message} from 'antd'
 import {ArrowLeftOutlined} from '@ant-design/icons';
 
 import PicturesWall from "./pictures-wall";
+import RichTextEditor from "./rich-text-editor";
 import {reqCategories} from "../../api/ajaxReqs";
 
 const {Item} = Form;
@@ -11,6 +12,7 @@ const {TextArea} = Input;
 // Products组件-添加、更新商品信息的子路由组件
 class ProdAddUpdate extends Component {
     picWall = React.createRef();
+    richTxtEdt = React.createRef();
 
     constructor(props) {
         super(props);
@@ -67,8 +69,9 @@ class ProdAddUpdate extends Component {
                         {/*ref用于在提交时获取上传的图片名称数组*/}
                         <PicturesWall ref={this.picWall} imgs={this.product.imgs}/>
                     </Item>
-                    <Item label={"商品详情"}>
-                        <div>商品详情</div>
+                    {/*为富文本编辑器单独指定labelCol和wrapperCol*/}
+                    <Item label={"商品详情"} labelCol={{span: 2}} wrapperCol={{span: 20}}>
+                        <RichTextEditor ref={this.richTxtEdt} detail={this.product.detail}/>
                     </Item>
                     <Item>
                         <Button type={"primary"} htmlType={"submit"}>提交</Button>
@@ -86,7 +89,9 @@ class ProdAddUpdate extends Component {
         console.log("onFormFinish---values---", values);
         //获取PicturesWall组件中上传的图片
         const imgNames = this.picWall.current.getImageNames();//通过ref可实现父组件调用子组件方法
+        const detail = this.richTxtEdt.current.getDetail();
         console.log("onFormFinish-----imgNames-----", imgNames);
+        console.log("onFormFinish-----richTxt-----", detail);
     }
 
     //自定义校验商品价格
