@@ -4,7 +4,7 @@ import {
 } from "antd";
 import {PlusOutlined} from '@ant-design/icons';
 
-import {reqProducts} from "../../api/ajaxReqs";
+import {reqProducts, reqSearchProducts} from "../../api/ajaxReqs";
 import {PAGE_SIZE} from "../../utils/constants";
 import './products.less';
 
@@ -17,18 +17,22 @@ class ProdHome extends Component {
         products: [],//表格商品数据数组
         total: 0,//商品的总数量
         loading: false,//表格数据是否正在加载中
+        searchKey: "",//搜索的关键字
+        searchType: "productName",//搜索的类型，默认按名称搜索
     }
 
     render() {
-        const {tableColumns, products, total, loading} = this.state;
+        const {tableColumns, products, total, loading, searchKey, searchType} = this.state;
         const cardTitle = (
             <span>
-                <Select defaultValue={"name_search"} className={"card-title-select"}>
-                    <Option value={"name_search"}>按名称搜索</Option>
-                    <Option value={"desc_search"}>按描述搜索</Option>
+                <Select value={searchType} className={"card-title-select"}
+                        onChange={value => this.setState({searchType: value})}>
+                    <Option value={"productName"}>按名称搜索</Option>
+                    <Option value={"productDesc"}>按描述搜索</Option>
                 </Select>
-                <Input placeholder={"关键字"} className={"card-title-input"}/>
-                <Button type={"primary"}>搜索</Button>
+                <Input placeholder={"关键字"} className={"card-title-input"} value={searchKey}
+                       onChange={event => this.onSearchKeyChange(event.target.value)}/>
+                <Button type={"primary"} onClick={() => this.getProducts(1)}>搜索</Button>
             </span>
         );
         const cardExtra = (
@@ -111,12 +115,34 @@ class ProdHome extends Component {
     //获取指定页码的商品数据
     getProducts = async (pageNum) => {
         this.setState({loading: true});//显示loading效果
-        const response = await reqProducts(pageNum, PAGE_SIZE);
+        const {searchKey, searchType} = this.state;
+        let response;
+        if (searchKey) {
+            response = await reqSearchProducts({
+                pageNum,
+                pageSize: PAGE_SIZE,
+                searchKey,
+                searchType
+            });
+        } else {
+            response = await reqProducts(pageNum, PAGE_SIZE);
+        }
         this.setState({loading: false});//隐藏loading
         if (response.status === 0) {
             const {total, list} = response.data;
             this.setState({total, products: list});
         }
+    }
+
+    onSearchKeyChange = (searchKey) => {
+        this.setState({searchKey}, () => {
+            /*若关键词被清空，则自动查询全部数据。
+            * setState为异步，查询操作必须在setState完成后进行，
+            * 故必须使用回调函数*/
+            if (searchKey === "") {
+                this.getProducts(1);
+            }
+        });
     }
 }
 
