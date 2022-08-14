@@ -4,7 +4,7 @@ import {ArrowLeftOutlined} from '@ant-design/icons';
 
 import PicturesWall from "./pictures-wall";
 import RichTextEditor from "./rich-text-editor";
-import {reqCategories} from "../../api/ajaxReqs";
+import {reqCategories, reqAddOrUpdateProduct} from "../../api/ajaxReqs";
 
 const {Item} = Form;
 const {TextArea} = Input;
@@ -85,13 +85,32 @@ class ProdAddUpdate extends Component {
         this.getCategories("0");//获取一级分类列表
     }
 
-    onFormFinish = (values) => {
+    onFormFinish = async (values) => {
         console.log("onFormFinish---values---", values);
-        //获取PicturesWall组件中上传的图片
-        const imgNames = this.picWall.current.getImageNames();//通过ref可实现父组件调用子组件方法
+        //1.收集数据，封装为product对象
+        const {name, desc, price, categoryIds} = values;
+        const pCategoryId = categoryIds.length === 1 ? "0" : categoryIds[0];//父分类id
+        const categoryId = categoryIds.length === 1 ? categoryIds[0] : categoryIds[1];//商品所属分类id
+        //获取PicturesWall组件中上传的图片、RichTextEditor组件中输入的商品描述
+        const imgs = this.picWall.current.getImageNames();//通过ref可实现父组件调用子组件方法
         const detail = this.richTxtEdt.current.getDetail();
-        console.log("onFormFinish-----imgNames-----", imgNames);
+
+        const product = {name, desc, price, pCategoryId, categoryId, imgs, detail};
+        if (!this.isAdd) {//若为更新，则需要_id属性
+            product._id = this.product._id;
+        }
+        console.log("onFormFinish-----imgs-----", imgs);
         console.log("onFormFinish-----richTxt-----", detail);
+
+        //2.调用接口，请求更新
+        const response = await reqAddOrUpdateProduct(product);
+        //3.根据结果进行提示
+        if (response.status === 0) {
+            this.props.history.goBack();
+            message.success(`${this.isAdd ? '添加' : '更新'}商品成功！`);
+        } else {
+            message.error(`${this.isAdd ? '添加' : '更新'}商品失败！`);
+        }
     }
 
     //自定义校验商品价格

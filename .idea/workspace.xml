@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="包含一些常量值的模块">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="静态数据dataSource中添加detail属性">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/ajaxReqs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ajaxReqs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/prod-add-update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-add-update.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,12 @@
       <workItem from="1659967309623" duration="166000" />
       <workItem from="1659967488063" duration="4884000" />
       <workItem from="1660053109523" duration="3517000" />
-      <workItem from="1660057295533" duration="2077000" />
+      <workItem from="1660057295533" duration="2474000" />
+      <workItem from="1660139649744" duration="5809000" />
+      <workItem from="1660225435897" duration="6588000" />
+      <workItem from="1660369441135" duration="10962000" />
+      <workItem from="1660400902791" duration="5795000" />
+      <workItem from="1660462830073" duration="3918000" />
     </task>
     <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
       <created>1659279673945</created>
@@ -324,7 +331,119 @@
       <option name="project" value="LOCAL" />
       <updated>1660059117723</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="新增获取商品分页列表接口">
+      <created>1660059794724</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1660059794724</updated>
+    </task>
+    <task id="LOCAL-00033" summary="新增查询商品数据">
+      <created>1660059845293</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1660059845293</updated>
+    </task>
+    <task id="LOCAL-00034" summary="记录分页的两种实现方式">
+      <created>1660059872966</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1660059872966</updated>
+    </task>
+    <task id="LOCAL-00035" summary="发送请求时，在url中增加了协议、主机名、端口号">
+      <created>1660370899493</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1660370899493</updated>
+    </task>
+    <task id="LOCAL-00036" summary="天气接口的url参数中，去掉了开头的斜杠/">
+      <created>1660370930783</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1660370930783</updated>
+    </task>
+    <task id="LOCAL-00037" summary="调整了详情、修改按钮的样式类名">
+      <created>1660370995891</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1660370995891</updated>
+    </task>
+    <task id="LOCAL-00038" summary="调整了按钮的样式">
+      <created>1660371014885</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1660371014885</updated>
+    </task>
+    <task id="LOCAL-00039" summary="基于antd组件实现了商品名称、描述、价格、分类组件">
+      <created>1660371139391</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1660371139391</updated>
+    </task>
+    <task id="LOCAL-00040" summary="更正了BASE_IMG_URL的端口为5001">
+      <created>1660386103459</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1660386103459</updated>
+    </task>
+    <task id="LOCAL-00041" summary="添加了删除已上传图片的接口">
+      <created>1660386138446</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1660386138446</updated>
+    </task>
+    <task id="LOCAL-00042" summary="通过antd Upload组件，实现了商品图片的上传和删除，并在更新商品时展示已有的图片">
+      <created>1660400995177</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1660400995177</updated>
+    </task>
+    <task id="LOCAL-00043" summary="通过ref，在父组件ProdAddUpdate中调用子组件PicturesWall的方法">
+      <created>1660401072560</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1660401072560</updated>
+    </task>
+    <task id="LOCAL-00044" summary="静态数据dataSource中增加imgs数组，用于测试修改商品信息时展示默认图片">
+      <created>1660401140650</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1660401140650</updated>
+    </task>
+    <task id="LOCAL-00045" summary="基于react-draft-wysiwyg的富文本编辑器组件，用于编辑商品详情">
+      <created>1660464585856</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1660464585857</updated>
+    </task>
+    <task id="LOCAL-00046" summary="添加RichTextEditor组件">
+      <created>1660464684138</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1660464684138</updated>
+    </task>
+    <task id="LOCAL-00047" summary="静态数据dataSource中添加detail属性">
+      <created>1660464714732</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1660464714732</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,23 +462,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="通过state参数方式，向Header组件中传递需要渲染的菜单组件的名称" />
-    <MESSAGE value="右侧头部组件" />
-    <MESSAGE value="记录右侧头部组件的实现重点" />
-    <MESSAGE value="简单实现Home组件" />
-    <MESSAGE value="添加了查询分类列表、添加分类、更新分类名称的请求接口" />
-    <MESSAGE value="修改了请求成功时的返回数据，从直接返回response改为返回response.data" />
-    <MESSAGE value="修改了获取请求数据的方式" />
-    <MESSAGE value="使用ConfigProvider将antd的默认语言改为中文" />
-    <MESSAGE value="删除了多余的formRef和console.log语句" />
-    <MESSAGE value="添加分类的表单组件" />
-    <MESSAGE value="修改分类名称的表单组件" />
-    <MESSAGE value="更正了之前写错的请求连接和参数" />
-    <MESSAGE value="品类管理组件，提供了商品品类的展示、添加和修改功能" />
-    <MESSAGE value="描述了商品-品类管理组件的功能和注意事项" />
-    <MESSAGE value="Products组件-默认子路由组件，展示商品信息" />
-    <MESSAGE value="Products组件-添加、更新商品信息的子路由组件" />
-    <MESSAGE value="Products组件-商品详情子路由组件" />
     <MESSAGE value="搭建了Products组件的整体路由结构，包含ProdHome、ProdAddUpdate、ProdDetail子组件" />
     <MESSAGE value="商品管理组件的样式文件" />
     <MESSAGE value="完成商品管理组件主界面表格静态布局" />
@@ -368,6 +470,23 @@
     <MESSAGE value="将表格列名数组加入state中，并将初始化方法的调用从constructor移到componentDidMount中" />
     <MESSAGE value="优化静态布局细节" />
     <MESSAGE value="包含一些常量值的模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="包含一些常量值的模块" />
+    <MESSAGE value="新增获取商品分页列表接口" />
+    <MESSAGE value="新增查询商品数据" />
+    <MESSAGE value="记录分页的两种实现方式" />
+    <MESSAGE value="发送请求时，在url中增加了协议、主机名、端口号" />
+    <MESSAGE value="天气接口的url参数中，去掉了开头的斜杠/" />
+    <MESSAGE value="调整了详情、修改按钮的样式类名" />
+    <MESSAGE value="调整了按钮的样式" />
+    <MESSAGE value="基于antd组件实现了商品名称、描述、价格、分类组件" />
+    <MESSAGE value="更正了BASE_IMG_URL的端口为5001" />
+    <MESSAGE value="添加了删除已上传图片的接口" />
+    <MESSAGE value="通过Upload组件，实现了商品图片的上传和删除，并在更新商品时展示已有的图片" />
+    <MESSAGE value="通过antd Upload组件，实现了商品图片的上传和删除，并在更新商品时展示已有的图片" />
+    <MESSAGE value="通过ref，在父组件ProdAddUpdate中调用子组件PicturesWall的方法" />
+    <MESSAGE value="静态数据dataSource中增加imgs数组，用于测试修改商品信息时展示默认图片" />
+    <MESSAGE value="基于react-draft-wysiwyg的富文本编辑器组件，用于编辑商品详情" />
+    <MESSAGE value="添加RichTextEditor组件" />
+    <MESSAGE value="静态数据dataSource中添加detail属性" />
+    <option name="LAST_COMMIT_MESSAGE" value="静态数据dataSource中添加detail属性" />
   </component>
 </project>

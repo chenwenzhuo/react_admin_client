@@ -36,44 +36,9 @@ class ProdHome extends Component {
                     onClick={() => this.props.history.push("/products/add_update")}>
                 添加商品
             </Button>);
-        const dataSource = [
-            {
-                _id: "1",
-                name: "联想ThinkPad 翼480",
-                desc: "年度重量级新品",
-                price: "66000",
-                status: "在售",
-                pCategoryId: "62ef5909c9014e6ea101b4f3",
-                categoryId: "62ef7055c9014e6ea101b508",
-                imgs: ["image-1660375711767.jpg", "image-1660375758973.jpg"],
-                detail: "<p><strong>联想</strong><em><ins>ThinkPad</ins></em> <del>翼480</del></p>"
-            },
-            {
-                _id: "2",
-                name: "华硕（ASUS）飞行堡垒",
-                desc: "15.6英寸窄边游戏本",
-                price: "6999",
-                status: "在售",
-                pCategoryId: "62ef5909c9014e6ea101b4f3",
-                categoryId: "62ef7055c9014e6ea101b508",
-                imgs: ["image-1660375774809.jpg", "image-1660376339071.jpg"],
-                detail: "<p style=\"text-align:center;\"><code>华硕</code>（ASUS）<sup>飞行堡垒</sup></p>"
-            },
-            {
-                _id: "3",
-                name: "你不知道的JavaScript（上卷）",
-                desc: "图灵程序设计丛书",
-                price: "35",
-                status: "下架",
-                pCategoryId: "0",
-                categoryId: "62ef6405c9014e6ea101b4f4",
-                imgs: ["image-1660379880396.jpg", "image-1660380021229.jpg"],
-                detail: "<p><ins>你不知道的</ins><code><strong>JavaScript</strong></code><sub>（上卷）</sub></p>"
-            },
-        ]
         return (
             <Card title={cardTitle} extra={cardExtra}>
-                <Table dataSource={dataSource} columns={tableColumns} rowKey={"_id"} bordered loading={loading}
+                <Table dataSource={products} columns={tableColumns} rowKey={"_id"} bordered loading={loading}
                        pagination={{
                            total,
                            defaultPageSize: PAGE_SIZE,
