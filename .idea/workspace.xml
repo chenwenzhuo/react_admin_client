@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="完善了添加/更新商品的请求发送">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="完善根据名称/描述搜索商品的功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,28 +107,7 @@
       <workItem from="1660225435897" duration="6588000" />
       <workItem from="1660369441135" duration="10962000" />
       <workItem from="1660400902791" duration="5795000" />
-      <workItem from="1660462830073" duration="4635000" />
-    </task>
-    <task id="LOCAL-00001" summary="完成登陆后页面的左侧导航栏组件及菜单项路由跳转">
-      <created>1659279673945</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1659279673945</updated>
-    </task>
-    <task id="LOCAL-00002" summary="完成Header组件静态界面">
-      <created>1659365098986</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1659365098986</updated>
-    </task>
-    <task id="LOCAL-00003" summary="记录左侧导航菜单的实现">
-      <created>1659365767151</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1659365767151</updated>
+      <workItem from="1660462830073" duration="7661000" />
     </task>
     <task id="LOCAL-00004" summary="配置代理，跨域请求百度地图天气数据">
       <created>1659778816617</created>
@@ -452,7 +431,28 @@
       <option name="project" value="LOCAL" />
       <updated>1660468408070</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="修改reqProducts接口的pageSize参数，修复表格无法翻页的问题">
+      <created>1660485059655</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1660485059658</updated>
+    </task>
+    <task id="LOCAL-00051" summary="新增reqSearchProducts接口，用于根据商品名称/描述，搜索产品分页列表">
+      <created>1660487924317</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1660487924317</updated>
+    </task>
+    <task id="LOCAL-00052" summary="完善根据名称/描述搜索商品的功能">
+      <created>1660487952327</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1660487952327</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,9 +471,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="完成商品管理组件主界面表格静态布局" />
-    <MESSAGE value="修改路径严格匹配规则，更新/详情界面无需严格匹配，将无法匹配路径重定向到首页" />
-    <MESSAGE value="!important增加card-title-input的权重，防止样式被覆盖" />
     <MESSAGE value="将表格列名数组加入state中，并将初始化方法的调用从constructor移到componentDidMount中" />
     <MESSAGE value="优化静态布局细节" />
     <MESSAGE value="包含一些常量值的模块" />
@@ -496,6 +493,9 @@
     <MESSAGE value="静态数据dataSource中添加detail属性" />
     <MESSAGE value="定义了添加/更新商品的接口" />
     <MESSAGE value="完善了添加/更新商品的请求发送" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了添加/更新商品的请求发送" />
+    <MESSAGE value="修改reqProducts接口的pageSize参数，修复表格无法翻页的问题" />
+    <MESSAGE value="新增reqSearchProducts接口，用于根据商品名称/描述，搜索产品分页列表" />
+    <MESSAGE value="完善根据名称/描述搜索商品的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善根据名称/描述搜索商品的功能" />
   </component>
 </project>
