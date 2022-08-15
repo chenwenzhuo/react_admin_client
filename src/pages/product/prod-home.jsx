@@ -6,7 +6,6 @@ import {PlusOutlined} from '@ant-design/icons';
 
 import {reqProducts, reqSearchProducts} from "../../api/ajaxReqs";
 import {PAGE_SIZE} from "../../utils/constants";
-import './products.less';
 
 const Option = Select.Option;
 
