@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="完善根据名称/描述搜索商品的功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/prod-detail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-detail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/products.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/products.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/products.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,14 +111,8 @@
       <workItem from="1660225435897" duration="6588000" />
       <workItem from="1660369441135" duration="10962000" />
       <workItem from="1660400902791" duration="5795000" />
-      <workItem from="1660462830073" duration="7661000" />
-    </task>
-    <task id="LOCAL-00004" summary="配置代理，跨域请求百度地图天气数据">
-      <created>1659778816617</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1659778816617</updated>
+      <workItem from="1660462830073" duration="7884000" />
+      <workItem from="1660570424183" duration="5170000" />
     </task>
     <task id="LOCAL-00005" summary="定义天气数据请求函数">
       <created>1659778840362</created>
@@ -452,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660487952327</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="完善根据名称/描述搜索商品的功能">
+      <created>1660488011641</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1660488011641</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
