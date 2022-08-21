@@ -36,6 +36,14 @@ export const reqAddCategory = (parentId, categoryName) => ajax(AJAX_PREFIX + 'ma
     parentId, categoryName
 }, 'POST');
 
+/**更新分类名称
+ * @param categoryId 待更新待分类待id值（由后端生成，查询可得）
+ * @param categoryName 分类的新名称
+ * */
+export const reqUpdateCategory = (categoryId, categoryName) => ajax(AJAX_PREFIX + 'manage/category/update', {
+    categoryId, categoryName
+}, 'POST');
+
 /**获取商品分页列表
  * @param pageNum 当前请求的分页页码
  * @param pageSize 当前请求的页大小（单页数据条数）
@@ -55,13 +63,12 @@ export const reqSearchProducts = ({pageNum, pageSize, searchKey, searchType}) =>
         [searchType]: searchKey//[searchType]表示使用searchType变量的值，作为对象的属性名
     });
 
-/**更新分类名称
- * @param categoryId 待更新待分类待id值（由后端生成，查询可得）
- * @param categoryName 分类的新名称
+/**更新商品的在售/下架状态
+ * @param productId 待更新状态的商品id
+ * @param status 商品的新状态
  * */
-export const reqUpdateCategory = (categoryId, categoryName) => ajax(AJAX_PREFIX + 'manage/category/update', {
-    categoryId, categoryName
-}, 'POST');
+export const reqUpdateProductStatus = (productId, status) => ajax(AJAX_PREFIX + 'manage/product/updateStatus',
+    {productId, status}, 'POST');
 
 /**删除指定名称的已上传图片
  * @param name 要删除的图片名称
