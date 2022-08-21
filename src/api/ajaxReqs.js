@@ -23,6 +23,11 @@ export const reqAddUser = (user) => ajax(AJAX_PREFIX + 'manage/user/add', user, 
  * */
 export const reqCategories = (parentId) => ajax(AJAX_PREFIX + 'manage/category/list', {parentId});
 
+/**根据categoryId获取分类信息
+ * @param categoryId 分类Id
+ * */
+export const reqCategoryInfo = (categoryId) => ajax(AJAX_PREFIX + 'manage/category/info', {categoryId});
+
 /**添加分类
  * @param parentId 父分类编号。添加一级分类时，由于其没有父分类，parentId为0
  * @param categoryName 待添加的分类名称
