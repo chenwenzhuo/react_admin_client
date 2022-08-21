@@ -19,7 +19,7 @@ class ProdDetail extends Component {
                 <ArrowLeftOutlined/>&nbsp;&nbsp;商品详情
             </button>
         );
-        const product = this.props.location.state;//取出state参数
+        const {product} = this.props.location.state;//取出state参数
         const {name, desc, price, imgs, detail, pCategoryId} = product;
         const {pCateName, cateName} = this.state;
         return (
@@ -59,7 +59,7 @@ class ProdDetail extends Component {
     }
 
     componentDidMount() {
-        const product = this.props.location.state;//取出state参数
+        const {product} = this.props.location.state;//取出state参数
         const {pCategoryId, categoryId} = product;
         this.getProductCategory(pCategoryId, categoryId);//获取商品的分类名称
     }

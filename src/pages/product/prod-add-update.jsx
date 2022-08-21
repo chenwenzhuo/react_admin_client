@@ -16,7 +16,7 @@ class ProdAddUpdate extends Component {
 
     constructor(props) {
         super(props);
-        const product = this.props.location.state;//取出state参数
+        const {product} = this.props.location.state;//取出state参数
         this.isAdd = !product;//取非操作，强制转换布尔类型 true-添加商品，false-修改商品
         this.product = product || {};//保存参数值
     }

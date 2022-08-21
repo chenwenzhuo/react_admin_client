@@ -36,7 +36,7 @@ class ProdHome extends Component {
         );
         const cardExtra = (
             <Button type="primary" icon={<PlusOutlined/>}
-                    onClick={() => this.props.history.push("/products/add_update")}>
+                    onClick={() => this.props.history.push("/products/add_update", {menuName: "添加商品"})}>
                 添加商品
             </Button>);
         return (
@@ -103,11 +103,17 @@ class ProdHome extends Component {
             render: (product) => (
                 <span>
                     <button className="oprt-button-prod detail-btn-prod-home"
-                            onClick={() => this.props.history.push("/products/detail", product)}>
+                            onClick={() => this.props.history.push("/products/detail", {
+                                product,
+                                menuName: "商品详情"
+                            })}>
                         详情
                     </button>
                     <button className="oprt-button-prod"
-                            onClick={() => this.props.history.push("/products/add_update", product)}>
+                            onClick={() => this.props.history.push("/products/add_update", {
+                                product,
+                                menuName: "修改商品"
+                            })}>
                         修改
                     </button>
                 </span>

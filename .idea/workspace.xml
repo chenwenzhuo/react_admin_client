@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="完成商品详情异步展示">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="解决&quot;进入商品管理子路由界面时，leftNav中商品管理菜单项不选中&quot;的bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ajaxReqs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ajaxReqs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,28 +109,7 @@
       <workItem from="1660400902791" duration="5795000" />
       <workItem from="1660462830073" duration="7884000" />
       <workItem from="1660570424183" duration="5369000" />
-      <workItem from="1661065898981" duration="6589000" />
-    </task>
-    <task id="LOCAL-00011" summary="添加了查询分类列表、添加分类、更新分类名称的请求接口">
-      <created>1659853721194</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1659853721194</updated>
-    </task>
-    <task id="LOCAL-00012" summary="修改了请求成功时的返回数据，从直接返回response改为返回response.data">
-      <created>1659855634123</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1659855634123</updated>
-    </task>
-    <task id="LOCAL-00013" summary="修改了获取请求数据的方式">
-      <created>1659855698741</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1659855698741</updated>
+      <workItem from="1661065898981" duration="8212000" />
     </task>
     <task id="LOCAL-00014" summary="使用ConfigProvider将antd的默认语言改为中文">
       <created>1659857395296</created>
@@ -456,7 +433,28 @@
       <option name="project" value="LOCAL" />
       <updated>1661071946695</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="增加reqUpdateProductStatus接口，更新商品的在售/下架状态">
+      <created>1661073365316</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1661073365316</updated>
+    </task>
+    <task id="LOCAL-00061" summary="完成对商品进行在售/下架状态的更新操作">
+      <created>1661073406158</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1661073406158</updated>
+    </task>
+    <task id="LOCAL-00062" summary="解决&quot;进入商品管理子路由界面时，leftNav中商品管理菜单项不选中&quot;的bug">
+      <created>1661074600476</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1661074600476</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,9 +473,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="发送请求时，在url中增加了协议、主机名、端口号" />
-    <MESSAGE value="天气接口的url参数中，去掉了开头的斜杠/" />
-    <MESSAGE value="调整了详情、修改按钮的样式类名" />
     <MESSAGE value="调整了按钮的样式" />
     <MESSAGE value="基于antd组件实现了商品名称、描述、价格、分类组件" />
     <MESSAGE value="更正了BASE_IMG_URL的端口为5001" />
@@ -500,6 +495,9 @@
     <MESSAGE value="增加reqCategoryInfo接口，根据分类Id获取分类信息" />
     <MESSAGE value="为详情按钮增加点击事件，跳转到商品详情界面" />
     <MESSAGE value="完成商品详情异步展示" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成商品详情异步展示" />
+    <MESSAGE value="增加reqUpdateProductStatus接口，更新商品的在售/下架状态" />
+    <MESSAGE value="完成对商品进行在售/下架状态的更新操作" />
+    <MESSAGE value="解决&quot;进入商品管理子路由界面时，leftNav中商品管理菜单项不选中&quot;的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决&quot;进入商品管理子路由界面时，leftNav中商品管理菜单项不选中&quot;的bug" />
   </component>
 </project>
