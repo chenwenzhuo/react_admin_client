@@ -33,8 +33,10 @@ class LeftNav extends Component {
 
     render() {
         const {items} = this.state;
-        //当前菜单路径
-        const curPath = this.props.location.pathname;
+        let curPath = this.props.location.pathname;//当前菜单路径
+        if (curPath.indexOf("/products") === 0) {//若当前请求的是/products或其子路由界面
+            curPath = "/products";//将curPath值改为/products，使得进入子路由界面后leftNav中菜单项也能选中
+        }
         //查找当前菜单项的父菜单
         const curItem = items.find(item => {
             if (!item.children) {
