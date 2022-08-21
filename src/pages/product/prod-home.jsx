@@ -100,7 +100,10 @@ class ProdHome extends Component {
             width: 150,
             render: (product) => (
                 <span>
-                    <button className="oprt-button-prod detail-btn-prod-home">详情</button>
+                    <button className="oprt-button-prod detail-btn-prod-home"
+                            onClick={() => this.props.history.push("/products/detail", product)}>
+                        详情
+                    </button>
                     <button className="oprt-button-prod"
                             onClick={() => this.props.history.push("/products/add_update", product)}>
                         修改
