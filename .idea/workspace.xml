@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="解决&quot;进入商品管理子路由界面时，leftNav中商品管理菜单项不选中&quot;的bug">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="向添加、修改商品和商品详情子路由组件传递menuName参数，便于Header中展示">
+      <change afterPath="$PROJECT_DIR$/src/pages/role/Role.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/role/Role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/role/Role.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,14 +111,8 @@
       <workItem from="1660400902791" duration="5795000" />
       <workItem from="1660462830073" duration="7884000" />
       <workItem from="1660570424183" duration="5369000" />
-      <workItem from="1661065898981" duration="8212000" />
-    </task>
-    <task id="LOCAL-00014" summary="使用ConfigProvider将antd的默认语言改为中文">
-      <created>1659857395296</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1659857395296</updated>
+      <workItem from="1661065898981" duration="9273000" />
+      <workItem from="1661089257245" duration="3228000" />
     </task>
     <task id="LOCAL-00015" summary="删除了多余的formRef和console.log语句">
       <created>1659880640773</created>
@@ -454,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661074600476</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="向添加、修改商品和商品详情子路由组件传递menuName参数，便于Header中展示">
+      <created>1661075075204</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1661075075204</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +476,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="调整了按钮的样式" />
     <MESSAGE value="基于antd组件实现了商品名称、描述、价格、分类组件" />
     <MESSAGE value="更正了BASE_IMG_URL的端口为5001" />
     <MESSAGE value="添加了删除已上传图片的接口" />
@@ -498,6 +500,7 @@
     <MESSAGE value="增加reqUpdateProductStatus接口，更新商品的在售/下架状态" />
     <MESSAGE value="完成对商品进行在售/下架状态的更新操作" />
     <MESSAGE value="解决&quot;进入商品管理子路由界面时，leftNav中商品管理菜单项不选中&quot;的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决&quot;进入商品管理子路由界面时，leftNav中商品管理菜单项不选中&quot;的bug" />
+    <MESSAGE value="向添加、修改商品和商品详情子路由组件传递menuName参数，便于Header中展示" />
+    <option name="LAST_COMMIT_MESSAGE" value="向添加、修改商品和商品详情子路由组件传递menuName参数，便于Header中展示" />
   </component>
 </project>
