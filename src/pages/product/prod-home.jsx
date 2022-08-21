@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {
-    Card, Select, Input, Button, Table
+    Card, Select, Input, Button, Table, message
 } from "antd";
 import {PlusOutlined} from '@ant-design/icons';
 
-import {reqProducts, reqSearchProducts} from "../../api/ajaxReqs";
+import {reqProducts, reqSearchProducts, reqUpdateProductStatus} from "../../api/ajaxReqs";
 import {PAGE_SIZE} from "../../utils/constants";
 
 const Option = Select.Option;
@@ -47,8 +47,7 @@ class ProdHome extends Component {
                            defaultPageSize: PAGE_SIZE,
                            showQuickJumper: true,
                            onChange: this.getProducts
-                       }}
-                />
+                       }}/>
             </Card>
         );
     }
@@ -87,11 +86,14 @@ class ProdHome extends Component {
             title: '状态',
             align: 'center',
             width: 120,
-            render: (goods) => (
+            render: (product) => (
                 <span>
-                    <span>{goods.status}</span>
+                    <span>{product.status === 1 ? "在售" : "已下架"}</span>
                     <br/>
-                    <Button type={"primary"}>下架</Button>
+                    <Button type={"primary"}
+                            onClick={() => this.changeProductStatus(product)}>
+                        {product.status === 1 ? "下架" : "上架"}
+                    </Button>
                 </span>
             )
         }, {
@@ -116,6 +118,7 @@ class ProdHome extends Component {
 
     //获取指定页码的商品数据
     getProducts = async (pageNum) => {
+        this.pageNum = pageNum;//保存当前页码
         this.setState({loading: true});//显示loading效果
         const {searchKey, searchType} = this.state;
         let response;
@@ -145,6 +148,17 @@ class ProdHome extends Component {
                 this.getProducts(1);
             }
         });
+    }
+
+    changeProductStatus = async (product) => {
+        const newStatus = product.status === 0 ? 1 : 0;
+        const response = await reqUpdateProductStatus(product._id, newStatus);
+        if (response.status === 0) {
+            message.success((newStatus === 0 ? "下架" : "上架") + "成功");
+            this.getProducts(this.pageNum);//更新后重新请求当前页的商品数据
+        } else {
+            message.error((newStatus === 0 ? "下架" : "上架") + "失败");
+        }
     }
 }
 
