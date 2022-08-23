@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="向添加、修改商品和商品详情子路由组件传递menuName参数，便于Header中展示">
-      <change afterPath="$PROJECT_DIR$/src/pages/role/Role.less" afterDir="false" />
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="增加reqRoles接口，获取所有角色列表">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ajaxReqs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ajaxReqs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/role/Role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/role/Role.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,21 +112,8 @@
       <workItem from="1660462830073" duration="7884000" />
       <workItem from="1660570424183" duration="5369000" />
       <workItem from="1661065898981" duration="9273000" />
-      <workItem from="1661089257245" duration="3228000" />
-    </task>
-    <task id="LOCAL-00015" summary="删除了多余的formRef和console.log语句">
-      <created>1659880640773</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1659880640773</updated>
-    </task>
-    <task id="LOCAL-00016" summary="添加分类的表单组件">
-      <created>1659880681472</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1659880681472</updated>
+      <workItem from="1661089257245" duration="3350000" />
+      <workItem from="1661265952778" duration="3801000" />
     </task>
     <task id="LOCAL-00017" summary="修改分类名称的表单组件">
       <created>1659880695992</created>
@@ -457,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661075075204</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="实现Role组件的静态界面">
+      <created>1661093178336</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1661093178336</updated>
+    </task>
+    <task id="LOCAL-00065" summary="增加reqRoles接口，获取所有角色列表">
+      <created>1661267485493</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1661267485493</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,8 +477,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="基于antd组件实现了商品名称、描述、价格、分类组件" />
-    <MESSAGE value="更正了BASE_IMG_URL的端口为5001" />
     <MESSAGE value="添加了删除已上传图片的接口" />
     <MESSAGE value="通过Upload组件，实现了商品图片的上传和删除，并在更新商品时展示已有的图片" />
     <MESSAGE value="通过antd Upload组件，实现了商品图片的上传和删除，并在更新商品时展示已有的图片" />
@@ -501,6 +500,8 @@
     <MESSAGE value="完成对商品进行在售/下架状态的更新操作" />
     <MESSAGE value="解决&quot;进入商品管理子路由界面时，leftNav中商品管理菜单项不选中&quot;的bug" />
     <MESSAGE value="向添加、修改商品和商品详情子路由组件传递menuName参数，便于Header中展示" />
-    <option name="LAST_COMMIT_MESSAGE" value="向添加、修改商品和商品详情子路由组件传递menuName参数，便于Header中展示" />
+    <MESSAGE value="实现Role组件的静态界面" />
+    <MESSAGE value="增加reqRoles接口，获取所有角色列表" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加reqRoles接口，获取所有角色列表" />
   </component>
 </project>
