@@ -84,6 +84,10 @@ export const reqAddOrUpdateProduct = (product) => ajax(
     product,
     'POST');
 
+/**获取所有角色列表，进行前台分页
+ * */
+export const reqRoles = () => ajax(AJAX_PREFIX + 'manage/role/list');
+
 /**请求天气数据
  * @param district_id 地区编号
  * */
