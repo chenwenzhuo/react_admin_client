@@ -93,6 +93,11 @@ export const reqRoles = () => ajax(AJAX_PREFIX + 'manage/role/list');
  * */
 export const reqAddRole = (roleName) => ajax(AJAX_PREFIX + 'manage/role/add', {roleName}, 'POST');
 
+/**修改角色权限
+ * @param role 角色对象
+ * */
+export const reqUpdateRole = (role) => ajax(AJAX_PREFIX + 'manage/role/update', role, 'POST');
+
 /**请求天气数据
  * @param district_id 地区编号
  * */
