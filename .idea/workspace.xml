@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="添加reqUpdateRole接口，用于更新角色权限">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="增加reqDeleteUser接口，用于删除指定用户">
+      <change afterPath="$PROJECT_DIR$/src/pages/user/User.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/role/Role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/role/Role.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/user/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/user/User.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,28 +117,9 @@
       <workItem from="1661434772816" duration="1135000" />
       <workItem from="1661580832185" duration="6254000" />
       <workItem from="1661598142945" duration="882000" />
-      <workItem from="1661602120252" duration="4453000" />
-    </task>
-    <task id="LOCAL-00020" summary="描述了商品-品类管理组件的功能和注意事项">
-      <created>1659968889160</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1659968889160</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Products组件-默认子路由组件，展示商品信息">
-      <created>1659970098402</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1659970098402</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Products组件-添加、更新商品信息的子路由组件">
-      <created>1659970117373</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1659970117373</updated>
+      <workItem from="1661602120252" duration="4627000" />
+      <workItem from="1661870054076" duration="1554000" />
+      <workItem from="1662017844146" duration="7278000" />
     </task>
     <task id="LOCAL-00023" summary="Products组件-商品详情子路由组件">
       <created>1659970129302</created>
@@ -461,7 +443,28 @@
       <option name="project" value="LOCAL" />
       <updated>1661610080171</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="完成了修改角色权限的功能">
+      <created>1661610324501</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1661610324501</updated>
+    </task>
+    <task id="LOCAL-00070" summary="增加reqUsers接口，用于查询所有用户的列表">
+      <created>1662039228067</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1662039228068</updated>
+    </task>
+    <task id="LOCAL-00071" summary="增加reqDeleteUser接口，用于删除指定用户">
+      <created>1662039863130</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1662039863130</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,9 +483,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="通过ref，在父组件ProdAddUpdate中调用子组件PicturesWall的方法" />
-    <MESSAGE value="静态数据dataSource中增加imgs数组，用于测试修改商品信息时展示默认图片" />
-    <MESSAGE value="基于react-draft-wysiwyg的富文本编辑器组件，用于编辑商品详情" />
     <MESSAGE value="添加RichTextEditor组件" />
     <MESSAGE value="静态数据dataSource中添加detail属性" />
     <MESSAGE value="定义了添加/更新商品的接口" />
@@ -505,6 +505,9 @@
     <MESSAGE value="增加reqAddRole接口，添加角色" />
     <MESSAGE value="完成了查询所有角色和添加角色功能" />
     <MESSAGE value="添加reqUpdateRole接口，用于更新角色权限" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加reqUpdateRole接口，用于更新角色权限" />
+    <MESSAGE value="完成了修改角色权限的功能" />
+    <MESSAGE value="增加reqUsers接口，用于查询所有用户的列表" />
+    <MESSAGE value="增加reqDeleteUser接口，用于删除指定用户" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加reqDeleteUser接口，用于删除指定用户" />
   </component>
 </project>
