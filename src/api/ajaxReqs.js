@@ -102,6 +102,11 @@ export const reqUpdateRole = (role) => ajax(AJAX_PREFIX + 'manage/role/update', 
  * */
 export const reqUsers = () => ajax(AJAX_PREFIX + 'manage/user/list');
 
+/**删除指定用户
+ * @param userId 待删除的用户id
+ * */
+export const reqDeleteUser = (userId) => ajax(AJAX_PREFIX + 'manage/user/delete', {userId}, 'POST');
+
 /**请求天气数据
  * @param district_id 地区编号
  * */
