@@ -13,10 +13,6 @@ const AJAX_PREFIX = 'ajaxProxy/';
  * */
 export const reqLogin = (username, password) => ajax(AJAX_PREFIX + 'login', {username, password}, 'POST');
 
-/**添加用户
- * @param user 用户信息对象
- * */
-export const reqAddUser = (user) => ajax(AJAX_PREFIX + 'manage/user/add', user, 'POST');
 
 /**获取一级/二级分类列表
  * @param parentId 父分类编号。查询一级分类时，由于其没有父分类，parentId为0
@@ -101,6 +97,11 @@ export const reqUpdateRole = (role) => ajax(AJAX_PREFIX + 'manage/role/update', 
 /**获取所有用户列表
  * */
 export const reqUsers = () => ajax(AJAX_PREFIX + 'manage/user/list');
+
+/**添加用户
+ * @param user 用户信息对象
+ * */
+export const reqAddUser = (user) => ajax(AJAX_PREFIX + 'manage/user/add', user, 'POST');
 
 /**删除指定用户
  * @param userId 待删除的用户id
