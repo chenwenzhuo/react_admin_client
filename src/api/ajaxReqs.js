@@ -103,6 +103,11 @@ export const reqUsers = () => ajax(AJAX_PREFIX + 'manage/user/list');
  * */
 export const reqAddUser = (user) => ajax(AJAX_PREFIX + 'manage/user/add', user, 'POST');
 
+/**修改用户信息
+ * @param user 待修改的用户对象
+ * */
+export const reqUpdateUser = (user) => ajax(AJAX_PREFIX + 'manage/user/update', user, 'POST');
+
 /**删除指定用户
  * @param userId 待删除的用户id
  * */
