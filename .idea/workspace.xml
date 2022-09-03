@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="将授权界面的treeData商品选项、图形图表选项key值改为/prodCate和/charts">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="实现菜单权限管理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/left-nav/LeftNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/left-nav/LeftNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/role/Role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/role/Role.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,14 +121,7 @@
       <workItem from="1661870054076" duration="1554000" />
       <workItem from="1662017844146" duration="10785000" />
       <workItem from="1662099981949" duration="5815000" />
-      <workItem from="1662174101852" duration="5644000" />
-    </task>
-    <task id="LOCAL-00028" summary="!important增加card-title-input的权重，防止样式被覆盖">
-      <created>1660054722412</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1660054722412</updated>
+      <workItem from="1662174101852" duration="6577000" />
     </task>
     <task id="LOCAL-00029" summary="将表格列名数组加入state中，并将初始化方法的调用从constructor移到componentDidMount中">
       <created>1660055261052</created>
@@ -466,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662191555389</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="实现菜单权限管理">
+      <created>1662195200682</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1662195200682</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="新增reqSearchProducts接口，用于根据商品名称/描述，搜索产品分页列表" />
     <MESSAGE value="完善根据名称/描述搜索商品的功能" />
     <MESSAGE value="将products.less文件的引入移动到父组件products中" />
     <MESSAGE value="增加了商品详情界面的样式" />
@@ -510,6 +509,7 @@
     <MESSAGE value="添加reqUpdateUser接口，用于更新用户信息" />
     <MESSAGE value="完成添加、修改角色功能" />
     <MESSAGE value="将授权界面的treeData商品选项、图形图表选项key值改为/prodCate和/charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="将授权界面的treeData商品选项、图形图表选项key值改为/prodCate和/charts" />
+    <MESSAGE value="实现菜单权限管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现菜单权限管理" />
   </component>
 </project>

@@ -148,15 +148,13 @@ class Role extends Component {
     selectRow(record) {
         const selectedRowKeys = [];//默认初始化一个空数组
         let selectedRole = {};
-        let selectedRoleMenus = [];
         //当前点击的是一个未被选中的行，则将id加入数组，在更新state时将其选中
         //当前点击的是一个已被选中的行，则直接使用空数组更新state，取消选中
         if (this.state.selectedRowKeys.indexOf(record._id) < 0) {
             selectedRowKeys.push(record._id);
             selectedRole = this.state.roles.find(role => role._id === record._id);
-            selectedRoleMenus = [...selectedRole.menus];
         }
-        this.setState({selectedRowKeys, selectedRole, selectedRoleMenus});
+        this.setState({selectedRowKeys, selectedRole});
     }
 
     onSelectedRowKeysChange = (selectedRowKeys) => {
@@ -168,7 +166,11 @@ class Role extends Component {
     }
 
     onAuthRoleClick = () => {
-        this.setState({modalDisplayStatus: 2});
+        const {selectedRole} = this.state;
+        this.setState({
+            modalDisplayStatus: 2,
+            selectedRoleMenus: [...selectedRole.menus]//每次打开授权弹窗前，重新读取selectedRoleMenus的值
+        });
     }
 
     handleAddRole = () => {
