@@ -63,7 +63,9 @@ class Role extends Component {
         return (<Card title={cardTitle}>
             <Table columns={tableColumns} dataSource={roles} rowKey={"_id"} bordered
                    rowSelection={{
-                       type: "radio", selectedRowKeys, onChange: this.onSelectedRowKeysChange,
+                       type: "radio",
+                       selectedRowKeys,
+                       onChange: this.onSelectedRowKeysChange,
                    }}
                    onRow={this.onRow}
                    pagination={{
@@ -145,7 +147,7 @@ class Role extends Component {
         }
     }
 
-    selectRow(record) {
+    selectRow = (record) => {
         const selectedRowKeys = [];//默认初始化一个空数组
         let selectedRole = {};
         //当前点击的是一个未被选中的行，则将id加入数组，在更新state时将其选中
