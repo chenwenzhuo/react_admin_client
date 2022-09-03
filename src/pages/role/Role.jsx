@@ -42,7 +42,7 @@ class Role extends Component {
         const treeData = [{
             title: "首页", key: "/home"
         }, {
-            title: "商品", key: "0-1", children: [{
+            title: "商品", key: "/prodCate", children: [{
                 title: "品类管理", key: "/category"
             }, {
                 title: "商品管理", key: "/products"
@@ -52,7 +52,7 @@ class Role extends Component {
         }, {
             title: "角色管理", key: "/role"
         }, {
-            title: "图形图表", key: "0-4", children: [{
+            title: "图形图表", key: "/charts", children: [{
                 title: "柱形图", key: "/charts/barchart"
             }, {
                 title: "折线图", key: "/charts/linechart"
@@ -60,13 +60,6 @@ class Role extends Component {
                 title: "饼图", key: "/charts/piechart"
             }]
         }];
-        /*const dataSource = [
-            {_id: "1", name: "测试1", create_time: "20181203", auth_time: "20181203", auth_name: "admin"},
-            {_id: "2", name: "测试2", create_time: "20181203", auth_time: "20181203", auth_name: "admin"},
-            {_id: "3", name: "测试3", create_time: "20181203", auth_time: "", auth_name: ""},
-            {_id: "4", name: "测试4", create_time: "20181203", auth_time: "", auth_name: ""},
-            {_id: "5", name: "测试5", create_time: "20181203", auth_time: "20220304", auth_name: "admin"},
-        ];*/
         return (<Card title={cardTitle}>
             <Table columns={tableColumns} dataSource={roles} rowKey={"_id"} bordered
                    rowSelection={{
@@ -87,7 +80,7 @@ class Role extends Component {
             </Modal>
             {/*Form的initialValues不能被setState更新，设置destroyOnClose属性，关闭时销毁Modal里的子元素*/}
             {/*否则会出现重新选了表格选项，但表格中角色名称还是上一个选项名称但情况*/}
-            <Modal title={"设置角色权限"} visible={modalDisplayStatus === 2} destroyOnClose
+            <Modal title={"设置角色权限"} visible={modalDisplayStatus === 2} destroyOnClose={true}
                    onOk={this.handleAuthRole} onCancel={this.handleModalCancel}>
                 <Item label={"角色名称"}>
                     <Input value={selectedRole.name} disabled/>

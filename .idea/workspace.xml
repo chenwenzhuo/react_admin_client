@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="添加reqUpdateUser接口，用于更新用户信息">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="完成添加、修改角色功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/user/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/user/User.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/role/Role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/role/Role.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +120,7 @@
       <workItem from="1661870054076" duration="1554000" />
       <workItem from="1662017844146" duration="10785000" />
       <workItem from="1662099981949" duration="5815000" />
-    </task>
-    <task id="LOCAL-00026" summary="完成商品管理组件主界面表格静态布局">
-      <created>1659972558450</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1659972558450</updated>
+      <workItem from="1662174101852" duration="2016000" />
     </task>
     <task id="LOCAL-00027" summary="修改路径严格匹配规则，更新/详情界面无需严格匹配，将无法匹配路径重定向到首页">
       <created>1660053664303</created>
@@ -464,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662102708032</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="完成添加、修改角色功能">
+      <created>1662174161230</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1662174161230</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +484,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="完善了添加/更新商品的请求发送" />
     <MESSAGE value="修改reqProducts接口的pageSize参数，修复表格无法翻页的问题" />
     <MESSAGE value="新增reqSearchProducts接口，用于根据商品名称/描述，搜索产品分页列表" />
     <MESSAGE value="完善根据名称/描述搜索商品的功能" />
@@ -508,6 +508,7 @@
     <MESSAGE value="完成用户展示界面和删除用户功能" />
     <MESSAGE value="添加reqAddUser接口，用于创建用户" />
     <MESSAGE value="添加reqUpdateUser接口，用于更新用户信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加reqUpdateUser接口，用于更新用户信息" />
+    <MESSAGE value="完成添加、修改角色功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成添加、修改角色功能" />
   </component>
 </project>
