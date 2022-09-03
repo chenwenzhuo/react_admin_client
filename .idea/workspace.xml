@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="增加reqDeleteUser接口，用于删除指定用户">
-      <change afterPath="$PROJECT_DIR$/src/pages/user/User.less" afterDir="false" />
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="添加reqUpdateUser接口，用于更新用户信息">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/user/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/user/User.jsx" afterDir="false" />
     </list>
@@ -119,28 +118,8 @@
       <workItem from="1661598142945" duration="882000" />
       <workItem from="1661602120252" duration="4627000" />
       <workItem from="1661870054076" duration="1554000" />
-      <workItem from="1662017844146" duration="7278000" />
-    </task>
-    <task id="LOCAL-00023" summary="Products组件-商品详情子路由组件">
-      <created>1659970129302</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1659970129302</updated>
-    </task>
-    <task id="LOCAL-00024" summary="搭建了Products组件的整体路由结构，包含ProdHome、ProdAddUpdate、ProdDetail子组件">
-      <created>1659970197776</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1659970197776</updated>
-    </task>
-    <task id="LOCAL-00025" summary="商品管理组件的样式文件">
-      <created>1659972507398</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1659972507398</updated>
+      <workItem from="1662017844146" duration="10785000" />
+      <workItem from="1662099981949" duration="5815000" />
     </task>
     <task id="LOCAL-00026" summary="完成商品管理组件主界面表格静态布局">
       <created>1659972558450</created>
@@ -464,7 +443,28 @@
       <option name="project" value="LOCAL" />
       <updated>1662039863130</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="完成用户展示界面和删除用户功能">
+      <created>1662041552293</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1662041552293</updated>
+    </task>
+    <task id="LOCAL-00073" summary="添加reqAddUser接口，用于创建用户">
+      <created>1662102560724</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1662102560724</updated>
+    </task>
+    <task id="LOCAL-00074" summary="添加reqUpdateUser接口，用于更新用户信息">
+      <created>1662102708032</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1662102708032</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,9 +483,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="添加RichTextEditor组件" />
-    <MESSAGE value="静态数据dataSource中添加detail属性" />
-    <MESSAGE value="定义了添加/更新商品的接口" />
     <MESSAGE value="完善了添加/更新商品的请求发送" />
     <MESSAGE value="修改reqProducts接口的pageSize参数，修复表格无法翻页的问题" />
     <MESSAGE value="新增reqSearchProducts接口，用于根据商品名称/描述，搜索产品分页列表" />
@@ -508,6 +505,9 @@
     <MESSAGE value="完成了修改角色权限的功能" />
     <MESSAGE value="增加reqUsers接口，用于查询所有用户的列表" />
     <MESSAGE value="增加reqDeleteUser接口，用于删除指定用户" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加reqDeleteUser接口，用于删除指定用户" />
+    <MESSAGE value="完成用户展示界面和删除用户功能" />
+    <MESSAGE value="添加reqAddUser接口，用于创建用户" />
+    <MESSAGE value="添加reqUpdateUser接口，用于更新用户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加reqUpdateUser接口，用于更新用户信息" />
   </component>
 </project>

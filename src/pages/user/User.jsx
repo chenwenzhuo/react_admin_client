@@ -1,25 +1,30 @@
 import React, {Component} from 'react';
 import {
-    Card, Button, Table, message, Modal, Form, Input, Tree
+    Card, Button, Table, message, Modal, Form, Input, Select
 } from "antd";
 
 import './User.less'
 import {PAGE_SIZE} from "../../utils/constants";
 import {formatDate} from "../../utils/dateUtils";
-import {reqDeleteUser, reqUsers} from "../../api/ajaxReqs";
+import {reqAddUser, reqDeleteUser, reqUpdateUser, reqUsers} from "../../api/ajaxReqs";
+
+const {Item} = Form;
+const {Option} = Select;
 
 class User extends Component {
+    addModifyUserForm = React.createRef();
     state = {
         tableColumns: [],//表格列数组
         total: 0,//表格中用户数据总数
         users: [],//所有用户数组
         roles: [],//所有角色数组
         roleNames: {},//key为角色id，value为角色名称的对象
-        cmModalVisible: false,//添加/修改用户弹窗是否显示
+        addModModalVisible: false,//添加/修改用户弹窗是否显示
     }
 
     render() {
-        const {tableColumns, total, users, cmModalVisible} = this.state;
+        const {tableColumns, total, users, roles, addModModalVisible} = this.state;
+        const userToMod = this.userToMod || {};//取出保存的待修改用户对象，若不存在则赋默认值为空对象
         const cardTitle = (
             <Button type={"primary"} onClick={this.onCreateUserClick}>创建用户</Button>
         );
@@ -46,9 +51,63 @@ class User extends Component {
                            defaultPageSize: PAGE_SIZE,
                            showQuickJumper: true,
                        }}/>
-                <Modal visible={cmModalVisible}
+                <Modal title={userToMod._id ? "修改用户" : "创建用户"}
+                       visible={addModModalVisible}
+                       destroyOnClose={true}
                        onOk={this.handleAddOrUpdateUser} onCancel={this.handleModalCancel}>
-                    添加/修改用户
+                    {/*labelCol和wrapperCol用于设置表单布局*/}
+                    <Form ref={this.addModifyUserForm}
+                          labelCol={{xs: {span: 24}, sm: {span: 6}}}
+                          wrapperCol={{xs: {span: 24}, sm: {span: 14}}}>
+                        <Item name={"username"} label={"用户名"} initialValue={userToMod.username}
+                              rules={[{
+                                  required: true, message: "用户名必须输入"
+                              }, {
+                                  min: 4, message: "用户名不少于4位"
+                              }, {
+                                  max: 12, message: "用户名不多于12位"
+                              }, {
+                                  pattern: /^[a-zA-Z0-9_]+$/, message: "用户名应由字母、数字、下划线组成"
+                              },]}>
+                            <Input placeholder={"请输入用户名"}/>
+                        </Item>
+                        {/*判断userToMod对象是否存在，存在则显示密码栏位，否则不显示*/}
+                        {userToMod._id ? null :
+                            <Item name={"password"} label={"密码"}
+                                  rules={[{
+                                      required: true, message: "密码必须输入"
+                                  }, {
+                                      min: 4, message: "密码不少于4位"
+                                  }, {
+                                      max: 12, message: "密码不多于12位"
+                                  }, {
+                                      pattern: /^[a-zA-Z0-9_]+$/, message: "密码应由字母、数字、下划线组成"
+                                  }]}>
+                                <Input type={"password"} placeholder={"请输入密码"}/>
+                            </Item>}
+                        <Item name={"phone"} label={"手机号"} initialValue={userToMod.phone}
+                              rules={[{
+                                  required: true, message: "手机号必须输入"
+                              }, {
+                                  pattern: /^[0-9]+$/, message: "手机号仅由数字组成"
+                              }, {
+                                  len: 11, message: "手机号长度应为11位"
+                              }]}>
+                            <Input placeholder={"请输入手机号"}/>
+                        </Item>
+                        <Item name={"email"} label={"邮箱"} initialValue={userToMod.email}
+                              rules={[{required: true, message: "邮箱必须输入"}]}>
+                            <Input placeholder={"请输入邮箱"}/>
+                        </Item>
+                        <Item name={"role_id"} label={"角色"} initialValue={userToMod.role_id}
+                              rules={[{required: true, message: "请选择角色"}]}>
+                            <Select placeholder="请选择角色">
+                                {roles.map(role => {
+                                    return <Option value={role._id} key={role._id}>{role.name}</Option>
+                                })}
+                            </Select>
+                        </Item>
+                    </Form>
                 </Modal>
             </Card>
         );
@@ -79,7 +138,7 @@ class User extends Component {
                 return (
                     <span>
                         <button className={"oprt-button-user"}
-                                onClick={this.onModifyUserClick}>
+                                onClick={() => this.onModifyUserClick(user)}>
                             修改
                         </button>
                         <button className={"oprt-button-user del-button-user"}
@@ -116,11 +175,13 @@ class User extends Component {
     }
 
     onCreateUserClick = () => {
-        this.setState({cmModalVisible: true});
+        this.userToMod = null;
+        this.setState({addModModalVisible: true});
     }
 
-    onModifyUserClick = () => {
-        this.setState({cmModalVisible: true});
+    onModifyUserClick = (userToMod) => {
+        this.userToMod = userToMod;//保存待修改的用户对象
+        this.setState({addModModalVisible: true});
     }
 
     onDeleteUserClick = (userToDel) => {
@@ -145,11 +206,63 @@ class User extends Component {
     }
 
     handleAddOrUpdateUser = () => {
-        this.setState({cmModalVisible: false});
+        this.addModifyUserForm.current.validateFields().then(async values => {
+            // console.log("handleAddOrUpdateUser-----values-----", values);
+            this.setState({addModModalVisible: false});//隐藏弹窗
+            this.addModifyUserForm.current.resetFields();//清空表单
+            if (this.userToMod) {
+                values._id = this.userToMod._id;
+                const response = await reqUpdateUser(values);
+                this.afterUpdateUserResponse(response);
+            } else {
+                const response = await reqAddUser(values);//发送请求，添加用户
+                this.afterAddUserResponse(response);
+            }
+        }).catch(error => {
+            console.log(error);
+        });
     }
 
     handleModalCancel = () => {
-        this.setState({cmModalVisible: false});
+        this.userToMod = null;//关闭弹窗时清除掉待修改对象
+        this.addModifyUserForm.current.resetFields();//隐藏弹窗时清空内部表单
+        this.setState({addModModalVisible: false});
+    }
+
+    afterAddUserResponse = (response) => {
+        if (response.status === 0) {
+            message.success("添加用户成功");
+            //将新用户对象加入用户数组
+            this.setState((state) => {
+                const users = [...state.users];
+                users.push(response.data);
+                return {users};
+            })
+        } else {
+            message.error("添加用户出错");
+        }
+    }
+
+    afterUpdateUserResponse = (response) => {
+        if (response.status === 0) {
+            message.success("修改用户成功");
+            //修改当前用户在数组中的信息
+            this.setState((state) => {
+                const users = [...state.users];
+                //从数组中将原对象去除
+                let targetIndex = -1;
+                const newUsers = users.filter((user, index) => {
+                    if (user._id === this.userToMod._id) {
+                        targetIndex = index;//记录当前对象在数组中的位置
+                    }
+                    return user._id !== this.userToMod._id
+                });
+                newUsers.splice(targetIndex, 0, response.data);//将新对象插入到数组指定位置
+                return {users: newUsers};
+            });
+        } else {
+            message.error("修改用户出错");
+        }
     }
 }
 
