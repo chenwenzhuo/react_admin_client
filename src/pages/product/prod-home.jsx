@@ -40,14 +40,19 @@ class ProdHome extends Component {
                 添加商品
             </Button>);
         return (
+            //pagination.current用于设置当前页码，
+            //搜索商品时将this.pageNum设为1，搜索完成重新render时表格回到第一页
+            //若不设置current，则仍停留在表格搜索前的页码
             <Card title={cardTitle} extra={cardExtra}>
                 <Table dataSource={products} columns={tableColumns} rowKey={"_id"} bordered loading={loading}
                        pagination={{
                            total,
+                           current: this.pageNum,
                            defaultPageSize: PAGE_SIZE,
                            showQuickJumper: true,
                            onChange: this.getProducts
-                       }}/>
+                       }}
+                />
             </Card>
         );
     }
