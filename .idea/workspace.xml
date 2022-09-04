@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="将select方法改为箭头函数，避免this指向问题">
+    <list default="true" id="acc7da67-9edd-4506-948d-fdffe1ea6da9" name="Changes" comment="表格pagination配置对象增加current属性，搜索完成后回到第一页">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/prod-home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,14 +121,8 @@
       <workItem from="1661870054076" duration="1554000" />
       <workItem from="1662017844146" duration="10785000" />
       <workItem from="1662099981949" duration="5815000" />
-      <workItem from="1662174101852" duration="9659000" />
-    </task>
-    <task id="LOCAL-00031" summary="包含一些常量值的模块">
-      <created>1660059117723</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1660059117723</updated>
+      <workItem from="1662174101852" duration="10150000" />
+      <workItem from="1662275709693" duration="840000" />
     </task>
     <task id="LOCAL-00032" summary="新增获取商品分页列表接口">
       <created>1660059794724</created>
@@ -467,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662198518185</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="表格pagination配置对象增加current属性，搜索完成后回到第一页">
+      <created>1662199834163</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1662199834163</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="增加了商品详情界面的样式" />
     <MESSAGE value="完成了商品详情界面的静态布局" />
     <MESSAGE value="增加reqCategoryInfo接口，根据分类Id获取分类信息" />
     <MESSAGE value="为详情按钮增加点击事件，跳转到商品详情界面" />
@@ -511,6 +510,7 @@
     <MESSAGE value="实现菜单权限管理" />
     <MESSAGE value="修改授权弹窗中tree组件的赋默认值逻辑" />
     <MESSAGE value="将select方法改为箭头函数，避免this指向问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="将select方法改为箭头函数，避免this指向问题" />
+    <MESSAGE value="表格pagination配置对象增加current属性，搜索完成后回到第一页" />
+    <option name="LAST_COMMIT_MESSAGE" value="表格pagination配置对象增加current属性，搜索完成后回到第一页" />
   </component>
 </project>

@@ -6,22 +6,6 @@
 
 通过`create-react-app react_admin_client`命令创建React模板项目。
 
-create-react-app 生成的默认目录结构:
-
-├── README.md  
-├── package.json  
-├── public  
-│ ├── favicon.ico  
-│ └── index.html  
-├── src  
-│ ├── App.css  
-│ ├── App.js  
-│ ├── App.test.js  
-│ ├── index.css  
-│ ├── index.js  
-│ └── logo.svg  
-└── yarn.lock
-
 ### 引入Antd
 
 [antd官方文档](https://ant.design/index-cn)
@@ -95,9 +79,29 @@ module.exports = {
 };
 ```
 
-### 登陆页面
+## 各组件实现要点
 
-登陆页面分为标题区和表单区。表单区使用antd的Form表单组件。
+### 登陆 src/pages/login
+
+登陆页面分为标题区和表单区。
+
+标题区包含项目logo和项目名称。
+
+React中为`<img/>`标签指定`src`属性时，不能直接使用图片路径。
+
+```
+{/*React中不支持直接使用路径引用图片*/}
+{/*<img src="./img/logo.png" alt="logo"/>*/}
+```
+
+需要将图片先引入，再赋值给`src`属性。
+```jsx
+import logo from '../../assets/img/logo.png';
+
+<img src={logo} alt="logo" className="login-logo"/>
+```
+
+表单区使用antd的Form表单组件。
 
 ```jsx
 <Form onFinish={this.handleSubmit} className="login-form" ref={this.formRef}>
@@ -170,7 +174,7 @@ validatePwd = (rule, value) => {
 }
 ```
 
-### 左侧导航栏
+### 左侧导航栏 src/components/left-nav
 
 导航栏主体结构使用antd Menu组件完成。从antd 4.20.0版本开始，使用`<Menu/>`标签与`items`配置对象数组的方式定义菜单结构。
 
@@ -219,7 +223,7 @@ class LeftNav extends Component {
 export default withRouter(LeftNav);
 ```
 
-### 右侧头部栏
+### 右侧头部栏 src/components/header
 
 主要实现了显示当前登陆人、退出登陆、显示当前时间、选择地点并显示实时天气的功能。
 
